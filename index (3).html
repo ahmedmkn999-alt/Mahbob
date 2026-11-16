@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="المنصة الرسمية لمحاضرات وملفات المعهد الفني الصناعي بالصحافة">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="منصة الصحافة">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%2312306b'/%3E%3Cpath d='M256 138 96 214l160 76 160-76z' fill='%23fff'/%3E%3Cpath d='M168 260v66c0 22 40 48 88 48s88-26 88-48v-66l-88 42z' fill='%23fff' opacity='.92'/%3E%3Crect x='398' y='214' width='14' height='108' rx='7' fill='%23fff'/%3E%3Ccircle cx='405' cy='334' r='16' fill='%23c9a227'/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%2312306b'/%3E%3Cpath d='M256 138 96 214l160 76 160-76z' fill='%23fff'/%3E%3Cpath d='M168 260v66c0 22 40 48 88 48s88-26 88-48v-66l-88 42z' fill='%23fff' opacity='.92'/%3E%3Crect x='398' y='214' width='14' height='108' rx='7' fill='%23fff'/%3E%3Ccircle cx='405' cy='334' r='16' fill='%23c9a227'/%3E%3C/svg%3E">
+<title>منصة المعهد الفني الصناعي بالصحافة</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --bg:#ffffff;--surface:#ffffff;--surface2:#f6f7f9;--border:#e5e8ee;--text:#0b1220;--muted:#667085;
+  --brand1:#12306b;--brand2:#1d4ed8;--brand-soft:#eef2fa;--brand-ink:#12306b;--gold:#b8921f;
+  --ok:#0f8a4f;--ok-soft:#e8f6ee;--warn:#9a6b00;--warn-soft:#fbf3de;--danger:#c93a40;--danger-soft:#fbeaea;
+  --shadow:0 1px 2px rgba(11,18,32,.04),0 12px 30px -16px rgba(11,18,32,.14);
+  --grad:linear-gradient(180deg,#1b3a85,#12306b);
+  --radius:18px;
+}
+[data-theme="dark"]{
+  --bg:#09090b;--surface:#111113;--surface2:#18181b;--border:#27272a;--text:#fafafa;--muted:#a1a1aa;
+  --brand1:#7b9bff;--brand2:#7b9bff;--brand-soft:#17203d;--brand-ink:#b9c8ff;--gold:#d4af37;
+  --ok:#4ade80;--ok-soft:#0f2a1a;--warn:#e5b34a;--warn-soft:#2e2410;--danger:#f87171;--danger-soft:#33171a;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 14px 34px -16px rgba(0,0,0,.8);
+  --grad:linear-gradient(180deg,#3a68f0,#2a4fcf);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;min-height:100dvh;
+  display:flex;flex-direction:column;line-height:1.6;overflow-x:hidden;
+}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,textarea,select{font-family:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+.hidden{display:none!important}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--brand1) 55%,transparent);outline-offset:2px}
+::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
+
+/* ---------- Buttons / fields ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.7rem 1.1rem;border-radius:14px;font-weight:800;font-size:.85rem;transition:transform .12s,box-shadow .15s,background .15s,opacity .15s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 1px 2px rgba(11,18,32,.25),0 10px 20px -10px rgba(18,48,107,.6)}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-soft{background:var(--brand-soft);color:var(--brand-ink)}
+.btn-soft:hover{filter:brightness(.97)}
+.btn-ghost{background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.btn-ghost:hover{background:var(--surface2)}
+.btn-danger{background:var(--danger-soft);color:var(--danger)}
+.btn-danger:hover{filter:brightness(.97)}
+.btn-warn{background:var(--brand-soft);color:var(--brand-ink);border:1px solid var(--border)}
+.btn-ok{background:#25d366;color:#052e14}
+.btn-sm{padding:.45rem .8rem;font-size:.75rem;border-radius:11px}
+.btn-block{width:100%}
+.icon-btn{flex:none;width:40px;height:40px;border-radius:13px;background:var(--surface);border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;color:var(--muted);transition:.15s}
+.icon-btn:hover{color:var(--brand1);border-color:var(--brand1)}
+.field label{display:block;font-size:.78rem;font-weight:800;margin-bottom:.35rem}
+.field .req{color:var(--danger)}
+.input{width:100%;padding:.75rem .95rem;border-radius:14px;background:var(--surface2);border:1.5px solid transparent;font-size:.88rem;font-weight:600;transition:.15s}
+.input:focus{outline:none;border-color:var(--brand1);background:var(--surface)}
+.input[readonly]{opacity:.7}
+.input.ltr{direction:ltr;text-align:left}
+textarea.input{resize:vertical;min-height:84px}
+
+/* ---------- Card / chips ---------- */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+.chip{display:inline-flex;align-items:center;gap:.35rem;padding:.25rem .7rem;border-radius:99px;font-size:.72rem;font-weight:800;background:var(--brand-soft);color:var(--brand-ink)}
+.chip.ok{background:var(--ok-soft);color:var(--ok)}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.danger{background:var(--danger-soft);color:var(--danger)}
+.status{display:inline-flex;align-items:center;gap:.45rem;padding:.4rem .8rem;border-radius:99px;background:var(--surface);border:1px solid var(--border);font-size:.72rem;font-weight:800;color:var(--muted)}
+.dot{width:9px;height:9px;border-radius:50%;background:#f5a524;display:inline-block}
+.js-cloud[data-state="online"] .dot{background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 22%,transparent)}
+.js-cloud[data-state="offline"] .dot{background:var(--danger)}
+.js-cloud[data-state="connecting"] .dot{animation:pulse 1.2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+
+/* ---------- Lock screen ---------- */
+.lock{position:fixed;inset:0;z-index:60;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:max(16px,env(safe-area-inset-top)) 18px max(16px,env(safe-area-inset-bottom));overflow-y:auto}
+.lock-top{width:100%;max-width:440px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.lock-top .tools{display:flex;gap:8px;align-items:center}
+.lock-card{width:100%;max-width:360px;text-align:center;margin:auto;padding:14px 0}
+.logo{width:80px;height:80px;margin:0 auto 14px;border-radius:26px;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;box-shadow:0 18px 36px -16px rgba(18,48,107,.65)}
+.lock h1{font-size:1.3rem;font-weight:900;letter-spacing:-.2px}
+.lock .sub{font-size:.82rem;color:var(--muted);font-weight:700;margin-top:4px}
+.pin-wrap{display:flex;align-items:center;justify-content:center;gap:6px;margin:20px 0 6px}
+.pin-wrap .icon-btn{width:38px;height:38px;border-radius:12px}
+.pin{display:flex;align-items:center;gap:5px;direction:ltr;padding:12px 10px;min-width:0;flex:1;justify-content:center;border-radius:18px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow)}
+.pin i.sep{width:8px;height:2px;background:var(--border);border-radius:2px;display:block}
+.pin b{flex:1 1 0;max-width:22px;min-width:0;height:32px;border-radius:9px;border:1.5px solid var(--border);background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:.95rem;font-weight:900;color:#fff;transition:.15s}
+.pin b.on{background:var(--grad);border-color:transparent;transform:translateY(-1px)}
+.pin.bad b{background:var(--danger);border-color:var(--danger)}
+.pin.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+.pin-err{min-height:22px;font-size:.78rem;font-weight:800;color:var(--danger);margin-bottom:8px}
+.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;direction:ltr;max-width:300px;margin:0 auto}
+.key{height:62px;border-radius:20px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);font-size:1.5rem;font-weight:800;display:flex;align-items:center;justify-content:center;transition:transform .1s,background .1s}
+.key:active{transform:scale(.93);background:var(--brand-soft);color:var(--brand-ink)}
+.key.fn{font-size:.82rem;color:var(--muted)}
+.key.clear{background:var(--danger-soft);color:var(--danger);border-color:transparent}
+
+.sig{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem .75rem;padding:.55rem 1rem;border-radius:18px;background:var(--surface);border:1px solid var(--border);font-size:.76rem;font-weight:700;color:var(--muted);box-shadow:var(--shadow)}
+.sig .name{font-weight:900;color:var(--text)}
+.sig a.who{color:var(--brand1);font-weight:900;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:text-decoration-color .15s}
+.sig a.who:hover{text-decoration-color:currentColor}
+.sig .nums{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:.4rem}
+.sig .tag{background:var(--brand-soft);color:var(--brand-ink);padding:.15rem .65rem;border-radius:99px;font-weight:800}
+.sig a.wa{display:inline-flex;align-items:center;gap:.35rem;background:var(--ok-soft);color:var(--ok);padding:.15rem .65rem;border-radius:99px;font-weight:900;direction:ltr}
+.sig .sep{opacity:.35}
+
+/* ---------- Top bar ---------- */
+.topbar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--surface) 86%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.topbar-in{max-width:1180px;margin:0 auto;padding:8px 18px;padding-top:max(8px,env(safe-area-inset-top));min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.brand .mark{width:42px;height:42px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex:none}
+.brand>div:last-child{min-width:0}
+.brand h2{font-size:.95rem;font-weight:900;line-height:1.25;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand h2 .chip{margin-inline-start:8px;vertical-align:middle}
+.brand p{font-size:.72rem;color:var(--muted);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:min(260px,100%)}
+.tabs{display:flex;gap:4px;padding:4px;border-radius:16px;background:var(--surface2);border:1px solid var(--border)}
+.tab{padding:.5rem 1rem;border-radius:12px;font-size:.8rem;font-weight:800;color:var(--muted);display:flex;align-items:center;gap:.45rem;transition:.15s;position:relative}
+.tab.active{background:var(--surface);color:var(--brand1);box-shadow:var(--shadow)}
+.badge-n{min-width:19px;height:19px;padding:0 5px;border-radius:99px;background:var(--danger);color:#fff;font-size:.65rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center}
+.actions{display:flex;align-items:center;gap:8px;flex:none}
+
+main{flex:1;width:100%;max-width:1180px;margin:0 auto;padding:22px 18px 36px}
+.section{animation:rise .3s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+
+/* ---------- Banner ---------- */
+.banner{position:relative;overflow:hidden;border-radius:22px;padding:28px 30px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow)}
+.banner::before{content:"";position:absolute;top:0;bottom:0;inset-inline-start:0;width:5px;background:var(--grad)}
+.banner::after{content:"";position:absolute;left:-90px;top:-90px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(18,48,107,.07),transparent 70%);pointer-events:none}
+.banner-in{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.banner h2{font-size:1.6rem;font-weight:900;line-height:1.25;color:var(--text);letter-spacing:-.2px}
+.banner p{font-size:.85rem;color:var(--muted);font-weight:600;margin-top:6px;max-width:520px}
+.pillw{display:inline-flex;align-items:center;gap:.45rem;background:var(--brand-soft);color:var(--brand-ink);padding:.3rem .85rem;border-radius:99px;font-size:.74rem;font-weight:800;margin-bottom:10px}
+.stats{display:flex;gap:10px}
+.stat{min-width:108px;text-align:center;padding:12px 14px;border-radius:16px;background:var(--surface2);border:1px solid var(--border)}
+.stat b{font-size:1.7rem;font-weight:900;display:block;line-height:1.1;color:var(--brand1)}
+.stat span{font-size:.7rem;font-weight:700;color:var(--muted)}
+
+/* ---------- Toolbar / pills ---------- */
+.toolbar{margin-top:18px;padding:14px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.pills{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;max-width:100%;scrollbar-width:none}
+.pills::-webkit-scrollbar{display:none}
+.pill{padding:.5rem .95rem;border-radius:13px;background:var(--surface2);font-size:.78rem;font-weight:800;color:var(--muted);white-space:nowrap;transition:.15s}
+.pill:hover{color:var(--text)}
+.pill.active{background:var(--grad);color:#fff}
+.search{position:relative;min-width:230px;flex:1;max-width:340px}
+.search i{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.8rem}
+.search .input{padding-right:2.4rem}
+
+/* ---------- Lecture cards ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px;margin-top:18px}
+.lec{padding:20px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;transition:transform .2s,box-shadow .2s}
+.lec:hover{transform:translateY(-3px);box-shadow:0 20px 40px -22px rgba(18,48,107,.35)}
+.lec-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
+.lec-top time{font-size:.72rem;font-weight:700;color:var(--muted);white-space:nowrap}
+.lec h4{font-size:1.02rem;font-weight:900;line-height:1.45;margin-bottom:8px}
+.meta{font-size:.78rem;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:.45rem;margin-bottom:10px}
+.meta i{color:var(--brand2)}
+.note{font-size:.78rem;line-height:1.7;background:var(--surface2);padding:.7rem .9rem;border-radius:14px;margin-bottom:10px;color:var(--muted);font-weight:600}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.lec-actions{display:flex;flex-direction:column;gap:8px;padding-top:14px;border-top:1px dashed var(--border)}
+.row{display:flex;gap:8px}.row>.btn{flex:1}
+.empty{grid-column:1/-1;text-align:center;padding:54px 20px}
+.empty .ic{width:68px;height:68px;border-radius:22px;background:var(--brand-soft);color:var(--brand1);display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 14px}
+.empty h3{font-size:1rem;font-weight:900}.empty p{font-size:.8rem;color:var(--muted);font-weight:600;margin-top:4px}
+
+/* ---------- Notifications ---------- */
+.panel{padding:22px}
+.panel-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid var(--border)}
+.panel-h h3{font-size:1.05rem;font-weight:900;display:flex;align-items:center;gap:.65rem}
+.panel-h .ico{width:38px;height:38px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:var(--brand-soft);color:var(--brand1)}
+.panel-h .ico.warn{background:var(--warn-soft);color:var(--warn)}
+.panel-h p{font-size:.75rem;color:var(--muted);font-weight:600;margin-top:2px}
+.list{display:flex;flex-direction:column;gap:10px}
+.item{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:16px;background:var(--surface2)}
+.item.unread{background:var(--warn-soft)}
+.item .ico{width:40px;height:40px;border-radius:13px;background:var(--warn-soft);color:var(--warn);display:flex;align-items:center;justify-content:center;flex:none}
+.item.unread .ico{background:var(--surface)}
+.item h4{font-size:.88rem;font-weight:900}.item p{font-size:.78rem;color:var(--muted);font-weight:600;margin-top:3px;line-height:1.7}
+.item time{font-size:.7rem;color:var(--muted);font-weight:700;white-space:nowrap}
+.item .grow{flex:1;min-width:0}
+
+/* ---------- Profile ---------- */
+.profile{max-width:680px;margin:0 auto;overflow:hidden}
+.profile-h{padding:24px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:16px;position:relative}
+.profile-h::before{content:"";position:absolute;top:0;bottom:0;inset-inline-start:0;width:5px;background:var(--grad)}
+.profile-h .av{width:64px;height:64px;border-radius:18px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem}
+.profile-h small{font-size:.72rem;font-weight:700;color:var(--muted)}
+.profile-h h3{font-size:1.25rem;font-weight:900}
+.profile-b{padding:22px;display:grid;gap:14px}
+.box{padding:14px 16px;border-radius:16px;background:var(--surface2)}
+.box small{display:block;font-size:.72rem;font-weight:800;color:var(--muted);margin-bottom:3px}
+.box b{font-size:1rem;font-weight:900}
+.box.code{background:var(--brand-soft)}
+.box.code b{font-family:ui-monospace,Menlo,monospace;letter-spacing:.14em;color:var(--brand-ink);direction:ltr;display:inline-block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ---------- Admin ---------- */
+.admin-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-grid .full{grid-column:1/-1}
+.media-box{padding:14px;border-radius:16px;border:1px solid var(--border);background:var(--surface2)}
+.media-box.v{background:color-mix(in srgb,var(--brand1) 7%,var(--surface))}
+.media-box.p{background:color-mix(in srgb,var(--danger) 6%,var(--surface))}
+.media-box label{display:flex;align-items:center;gap:.45rem;font-size:.78rem;font-weight:800;margin-bottom:.45rem}
+.media-box .input{background:var(--surface)}
+.media-box .hint{font-size:.7rem;color:var(--muted);font-weight:600;margin-top:6px}
+.sa{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px;padding:12px;border-radius:16px;background:var(--surface2);border:1px solid var(--border)}
+.sa label{display:block;font-size:.68rem;font-weight:800;color:var(--muted);margin-bottom:4px}
+.sa select{padding:.55rem .8rem;border-radius:12px;background:var(--surface);color:var(--text);border:1px solid var(--border);font-weight:800;font-size:.78rem}
+.lec-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;padding:14px;border-radius:16px;background:var(--surface2)}
+.lec-row h4{font-size:.88rem;font-weight:900;margin:.2rem 0}
+.lec-row p{font-size:.73rem;color:var(--muted);font-weight:700}
+.lec-row .ops{display:flex;gap:6px;flex-wrap:wrap}
+
+/* ---------- Bottom nav ---------- */
+.bottom-nav{position:fixed;bottom:0;inset-inline:0;z-index:30;display:none;padding:6px 8px calc(6px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--surface) 90%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--border)}
+.bottom-nav .bn{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 4px;border-radius:14px;font-size:.68rem;font-weight:800;color:var(--muted);position:relative}
+.bottom-nav .bn i{font-size:1.15rem}
+.bottom-nav .bn.active{color:var(--brand1);background:var(--brand-soft)}
+.bottom-nav .badge-n{position:absolute;top:2px;left:calc(50% + 4px)}
+.bottom-nav.on~footer{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+
+footer{border-top:1px solid var(--border);background:var(--surface);padding:18px}
+.foot{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;font-size:.75rem;color:var(--muted);font-weight:700}
+.foot .l{display:flex;align-items:center;gap:10px}
+.foot .m{width:30px;height:30px;border-radius:10px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.8rem}
+
+/* ---------- Modals ---------- */
+.overlay{position:fixed;inset:0;z-index:70;background:rgba(11,18,32,.45);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:14px}
+.modal{background:var(--surface);border-radius:26px;width:100%;max-width:900px;max-height:92vh;max-height:92dvh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);border:1px solid var(--border);animation:rise .22s ease both}
+.modal-h{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface);color:var(--text);border-bottom:1px solid var(--border)}
+.modal-h h3{font-size:.95rem;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.modal-h .chip{margin-bottom:3px}
+.modal-h .btn{background:var(--surface2);color:var(--text)}
+.modal-h .x{width:36px;height:36px;border-radius:11px;background:var(--surface2);color:var(--muted);display:flex;align-items:center;justify-content:center}
+.modal-h .x:hover{background:var(--danger-soft);color:var(--danger)}
+.player{position:relative;background:#000;aspect-ratio:16/9;width:100%}
+.player{overflow:hidden;direction:ltr;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.vp-stage{position:absolute;inset:0}
+.vp-stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
+.vp-stage iframe{position:absolute;left:0;top:0;width:100%;height:100%;border:0}
+/* وضع المشغّل المخصص: نكبّر إطار يوتيوب لأعلى وأسفل لإخفاء شريط العنوان وفيديوهات الاقتراحات خارج الحدود */
+#vp[data-mode="custom"] .vp-stage iframe{top:-76px;height:calc(100% + 152px);pointer-events:none}
+.vp-shield{position:absolute;inset:0;z-index:3;cursor:pointer}
+.vp-cover{position:absolute;inset:0;z-index:4;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;background:rgba(0,0,0,.38)}
+.vp-big,.vp-spin{display:none}
+.vp-big{width:78px;height:78px;border-radius:50%;background:var(--grad);color:#fff;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 18px 40px -12px rgba(0,0,0,.7)}
+.vp-big i{margin-inline-start:4px}
+.vp-spin{width:46px;height:46px;border-radius:50%;border:4px solid rgba(255,255,255,.25);border-top-color:#fff;animation:vpspin .8s linear infinite}
+@keyframes vpspin{to{transform:rotate(360deg)}}
+#vp[data-state="loading"] .vp-cover{opacity:1;background:#000}
+#vp[data-state="loading"] .vp-spin{display:block}
+#vp[data-state="paused"] .vp-cover{opacity:1}
+#vp[data-state="paused"] .vp-big{display:flex}
+#vp[data-state="ended"] .vp-cover{opacity:1;background:#000}
+#vp[data-state="ended"] .vp-big{display:flex}
+.vp-ui{position:absolute;left:0;right:0;bottom:0;z-index:5;padding:30px 14px 10px;background:linear-gradient(transparent,rgba(0,0,0,.78));opacity:0;pointer-events:none;transition:opacity .2s;color:#fff}
+#vp.ui .vp-ui,#vp:not([data-state="playing"]) .vp-ui{opacity:1;pointer-events:auto}
+#vp[data-state="loading"] .vp-ui{opacity:0;pointer-events:none}
+.vp-seek{position:relative;height:18px;display:flex;align-items:center;cursor:pointer;touch-action:none}
+.vp-seek::before{content:"";position:absolute;left:0;right:0;height:5px;border-radius:9px;background:rgba(255,255,255,.28)}
+.vp-buf,.vp-prog{position:absolute;left:0;height:5px;border-radius:9px;width:0}
+.vp-buf{background:rgba(255,255,255,.35)}
+.vp-prog{background:var(--brand2,#1d4ed8);background:#4f7bff}
+.vp-knob{position:absolute;left:0;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.5);transform:scale(.9)}
+.vp-seek:hover .vp-knob{transform:scale(1.2)}
+.vp-row{display:flex;align-items:center;gap:4px;margin-top:2px}
+.vp-row button{width:38px;height:38px;border-radius:11px;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:1rem;transition:background .15s}
+.vp-row button:hover{background:rgba(255,255,255,.16)}
+.vp-row .vp-rate{width:auto;padding:0 10px;font-size:.78rem;font-weight:900}
+.vp-time{font-size:.76rem;font-weight:800;margin-inline:8px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.vp-sp{flex:1}
+.vp-vol{display:flex;align-items:center;gap:2px}
+.vp-vol input{width:78px;accent-color:#4f7bff;height:4px;cursor:pointer}
+.vp-menu-wrap{position:relative}
+.vp-menu{position:absolute;bottom:46px;right:0;min-width:92px;padding:6px;border-radius:14px;background:rgba(18,20,28,.96);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:2px;box-shadow:0 18px 40px -12px rgba(0,0,0,.8)}
+.vp-menu button{width:100%;height:34px;justify-content:center;font-size:.8rem;font-weight:800;border-radius:9px}
+.vp-menu button.on{background:rgba(79,123,255,.35)}
+.vp-flash{position:absolute;top:50%;z-index:6;transform:translateY(-50%) scale(.8);padding:10px 18px;border-radius:99px;background:rgba(0,0,0,.6);color:#fff;font-weight:900;font-size:.95rem;opacity:0;pointer-events:none}
+.vp-flash.on{animation:vpflash .6s ease both}
+@keyframes vpflash{0%{opacity:0;transform:translateY(-50%) scale(.8)}25%{opacity:1;transform:translateY(-50%) scale(1)}100%{opacity:0;transform:translateY(-50%) scale(1)}}
+.vp-corner{display:none;position:absolute;top:0;right:0;width:68px;height:56px;z-index:6;background:#000}
+#vp[data-mode="frame"][data-kind="drive"] .vp-corner{display:block}
+#vp[data-mode="frame"] .vp-shield,#vp[data-mode="frame"] .vp-cover,#vp[data-mode="frame"] .vp-ui,#vp[data-mode="frame"] .vp-flash{display:none}
+#vp:fullscreen{aspect-ratio:auto;width:100%;height:100%}
+#vp:-webkit-full-screen{aspect-ratio:auto;width:100%;height:100%}
+#vp.vp-fake{position:fixed;inset:0;z-index:200;aspect-ratio:auto;width:100%;height:100%;min-height:0}
+@media (hover:none){.vp-vol input{display:none}}
+@media (max-width:560px){.vp-row button{width:34px;height:34px}.vp-time{margin-inline:4px;font-size:.7rem}}
+.player-note{font-size:.72rem;color:var(--muted);font-weight:700;padding:10px 18px;text-align:center}
+.modal-b{padding:18px;overflow-y:auto;display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}
+.modal-b>*{min-width:0}
+.modal-h.light{background:var(--surface);color:var(--text);border-bottom:1px solid var(--border)}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:16px}
+table{width:100%;border-collapse:collapse;font-size:.78rem;text-align:right}
+th{background:var(--surface2);color:var(--muted);padding:.7rem;font-weight:800;white-space:nowrap}
+td{padding:.65rem .7rem;border-top:1px solid var(--border);vertical-align:middle}
+.code-cell{display:flex;align-items:center;gap:6px;justify-content:center;flex-wrap:wrap}
+.code-val{font-family:ui-monospace,Menlo,monospace;font-weight:900;letter-spacing:.1em;direction:ltr;padding:.25rem .6rem;border-radius:10px;background:var(--brand-soft);color:var(--brand-ink)}
+.code-val.locked{background:var(--surface2);color:var(--muted);letter-spacing:.25em}
+
+.toasts{position:fixed;top:78px;inset-inline:0;z-index:90;display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none;padding:0 14px}
+.toast{pointer-events:auto;display:flex;align-items:center;gap:.6rem;padding:.7rem 1.1rem;border-radius:14px;font-size:.82rem;font-weight:800;color:var(--text);background:var(--surface);border:1px solid var(--border);box-shadow:0 18px 40px -16px rgba(11,18,32,.35);max-width:420px;animation:rise .25s both}
+.toast.error{border-color:#f0c4c6;color:var(--danger)}.toast.info i{color:var(--brand2)}.toast.success i{color:var(--ok)}
+
+@media (max-width:860px){
+  .admin-grid{grid-template-columns:1fr}
+  .tabs{display:none}
+  .bottom-nav.on{display:flex}
+  .brand p{max-width:150px}
+}
+@media (max-width:560px){
+  .form-grid,.two{grid-template-columns:1fr}
+  .banner{padding:20px 22px;border-radius:20px}.banner h2{font-size:1.3rem}
+  .stats{width:100%}.stat{flex:1}
+  .hide-sm{display:none}
+  .topbar-in{padding-inline:12px;gap:8px}
+  .brand{gap:9px}.brand .mark{width:38px;height:38px;border-radius:12px;font-size:1rem}
+  .brand h2{font-size:.9rem}.brand p{font-size:.68rem}
+  .actions{gap:5px}.actions .icon-btn{width:36px;height:36px;border-radius:12px}
+  .actions .btn-sm{padding:0;width:36px;height:36px;border-radius:12px}
+  main{padding-inline:14px}
+  .foot{justify-content:center;text-align:center}
+  .grid{grid-template-columns:1fr}
+  .key{height:58px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ---------- صفحات المحاضرة / المشغّل / PDF ---------- */
+body.in-full #topbar,body.in-full #bottomNav,body.in-full footer{display:none!important}
+body.in-full main{max-width:1440px;padding:0 0 24px}
+.lec.go{cursor:pointer}
+.lec.go:focus-visible{outline-offset:3px}
+.lec.go .btn{pointer-events:none}
+.crumbs{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.lp-hero{padding:26px 28px;position:relative;overflow:hidden}
+.lp-hero::before{content:"";position:absolute;top:0;bottom:0;inset-inline-start:0;width:5px;background:var(--grad)}
+.lp-hero h1{font-size:1.65rem;font-weight:900;line-height:1.45;margin:12px 0 10px}
+.lp-meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.82rem;font-weight:700;color:var(--muted)}
+.lp-meta i{color:var(--brand2);margin-inline-end:6px}
+.lp-media{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:18px}
+.mc{overflow:hidden;display:flex;flex-direction:column}
+.mc-thumb{position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;color:#fff;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#12306b,#1d4ed8)}
+.mc-thumb.pdf{background:linear-gradient(135deg,#7f1d1d,#c93a40)}
+.mc-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mc-thumb::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.18);transition:background .2s}
+.mc-thumb:hover::after{background:rgba(0,0,0,.32)}
+.mc-thumb .pl{position:relative;z-index:1;width:76px;height:76px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 18px 40px -12px rgba(0,0,0,.7);transition:transform .2s}
+.mc-thumb .pl i{margin-inline-start:4px}
+.mc-thumb:hover .pl{transform:scale(1.08)}
+.mc-thumb .big-ic{position:relative;z-index:1;font-size:3.2rem}
+.mc-body{padding:18px;display:grid;gap:12px}
+.mc-body h3{font-weight:900;font-size:1rem}
+.mc-body p{font-size:.78rem;color:var(--muted);font-weight:600;margin-top:-6px}
+.sec-title{font-size:1.02rem;font-weight:900;margin:26px 0 12px;display:flex;align-items:center;gap:.6rem}
+.sec-title i{color:var(--brand1)}
+.rel{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.rel-item{display:flex;gap:12px;align-items:center;padding:10px;border-radius:16px;background:var(--surface);border:1px solid var(--border);text-align:right;transition:.15s;width:100%}
+.rel-item:hover{border-color:var(--brand1);transform:translateY(-2px)}
+.rel-item.cur{border-color:var(--brand1);background:var(--brand-soft)}
+.rel-th{flex:none;width:96px;aspect-ratio:16/9;border-radius:11px;overflow:hidden;position:relative;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.rel-th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rel-th i{position:relative;z-index:1;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.rel-t{min-width:0;display:grid;gap:2px}
+.rel-t b{font-size:.84rem;font-weight:900;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rel-t small{font-size:.7rem;color:var(--muted);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.wp-bar{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px;padding-top:max(10px,env(safe-area-inset-top));background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.wp-bar .t{min-width:0;flex:1}
+.wp-bar small{display:block;font-size:.7rem;font-weight:800;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wp-bar h1{font-size:.95rem;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wp-grid{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px;padding:18px;align-items:start}
+.wp-grid.solo{grid-template-columns:minmax(0,1100px);justify-content:center}
+.wp-main{min-width:0}
+.wp-main .player{border-radius:18px;box-shadow:var(--shadow)}
+.wp-info{padding:20px;margin-top:6px}
+.wp-info h2{font-size:1.2rem;font-weight:900;line-height:1.5;margin:10px 0 8px}
+.wp-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.wp-side{padding:14px;position:sticky;top:78px;max-height:calc(100dvh - 98px);overflow-y:auto}
+.wp-side .sec-title{margin-top:0}
+.wp-side .rel{grid-template-columns:1fr}
+.vp-local{position:absolute;inset:0;direction:rtl;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:#0b1220;overflow:hidden}
+.vp-local img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;filter:blur(2px)}
+.vp-local-in{position:relative;z-index:1;display:grid;gap:10px;justify-items:center;padding:14px;max-width:420px}
+.vp-local-in span{font-size:.75rem;font-weight:700;line-height:1.7;opacity:.9}
+.pdf-stage{height:calc(100dvh - 124px);min-height:420px;background:var(--surface2)}
+.pdf-stage iframe{width:100%;height:100%;border:0;background:#fff;display:block}
+@media (max-width:980px){
+  .wp-grid,.wp-grid.solo{grid-template-columns:minmax(0,1fr);padding:0;gap:0}
+  .wp-main .player{border-radius:0;box-shadow:none}
+  .wp-info{margin:14px}
+  .wp-side{position:static;max-height:none;margin:0 14px 14px}
+  body.in-full main{padding-bottom:0}
+}
+@media (max-width:560px){
+  .lp-hero{padding:20px}.lp-hero h1{font-size:1.3rem}
+  .mc-thumb .pl{width:62px;height:62px;font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= شاشة القفل ================= -->
+<section id="lock" class="lock" aria-label="تسجيل الدخول">
+  <div class="lock-top">
+    <span class="status js-cloud" data-state="connecting"><i class="dot"></i><span class="js-cloud-text">جاري الاتصال…</span></span>
+    <div class="tools">
+      <button class="btn btn-soft btn-sm js-install" data-act="install"><i class="fa-solid fa-download"></i><span>تثبيت التطبيق</span></button>
+      <button class="icon-btn" data-act="theme" aria-label="الوضع الأسود / الأبيض"><i class="fa-solid fa-moon js-theme-ic"></i></button>
+      <button class="icon-btn" data-act="sound" aria-label="الصوت"><i class="fa-solid fa-volume-high js-sound-ic"></i></button>
+    </div>
+  </div>
+
+  <div class="lock-card">
+    <div class="logo"><i class="fa-solid fa-graduation-cap"></i></div>
+    <h1>المعهد الفني الصناعي بالصحافة</h1>
+    <p class="sub">أدخل كود الدخول المكوّن من 9 أرقام</p>
+
+    <div class="pin-wrap">
+      <button class="icon-btn" data-act="paste" aria-label="لصق الكود" title="لصق آخر حاجة نسختها"><i class="fa-regular fa-clipboard"></i></button>
+      <div id="pin" class="pin" role="status" aria-live="polite"></div>
+      <button class="icon-btn" data-act="eye" aria-label="إظهار / إخفاء الكود"><i class="fa-regular fa-eye js-eye-ic"></i></button>
+    </div>
+    <input id="pasteField" class="input ltr hidden" inputmode="numeric" autocomplete="off" placeholder="الصق الكود هنا" aria-label="الصق الكود" style="margin-top:8px;text-align:center">
+    <p id="pinErr" class="pin-err" role="alert"></p>
+    <div class="keypad" id="keypad"></div>
+  </div>
+
+  <div class="js-signature" style="margin-top:14px"></div>
+</section>
+
+<!-- ================= التطبيق ================= -->
+<header class="topbar hidden" id="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <div class="mark"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div>
+        <h2>منصة <span class="hide-sm">معهد </span>الصحافة <span id="roleBadge" class="chip hide-sm">طالب</span></h2>
+        <p id="subTitle"></p>
+      </div>
+    </div>
+
+    <nav class="tabs hidden" id="deskTabs" aria-label="التنقل">
+      <button class="tab active" data-act="tab" data-tab="lectures"><i class="fa-solid fa-circle-play"></i><span>المحاضرات والملفات</span></button>
+      <button class="tab" data-act="tab" data-tab="notifications"><i class="fa-solid fa-bell"></i><span>الإشعارات</span><span class="badge-n js-unread hidden">0</span></button>
+      <button class="tab" data-act="tab" data-tab="profile"><i class="fa-solid fa-id-card"></i><span>بياناتي</span></button>
+    </nav>
+
+    <div class="actions">
+      <span class="status js-cloud hide-sm" data-state="connecting"><i class="dot"></i><span class="js-cloud-text">…</span></span>
+      <button id="installBtn" class="btn btn-soft btn-sm js-install" data-act="install"><i class="fa-solid fa-download"></i><span class="hide-sm">تثبيت التطبيق</span></button>
+      <button class="icon-btn" data-act="theme" aria-label="الوضع الأسود / الأبيض"><i class="fa-solid fa-moon js-theme-ic"></i></button>
+      <button class="icon-btn" data-act="sound" aria-label="الصوت"><i class="fa-solid fa-volume-high js-sound-ic"></i></button>
+      <button class="btn btn-danger btn-sm" data-act="logout"><i class="fa-solid fa-right-from-bracket"></i><span class="hide-sm">خروج</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="hidden">
+
+  <!-- ===== واجهة الطالب ===== -->
+  <div id="studentView" class="hidden">
+
+    <section id="tab-lectures" class="section">
+      <div class="banner">
+        <div class="banner-in">
+          <div>
+            <span class="pillw"><i class="fa-solid fa-layer-group"></i><span id="bYear"></span></span>
+            <h2 id="bDept"></h2>
+            <p>كل محاضرات الفيديو وملفات الـ PDF الخاصة بشعبتك، بتتحدّث لحظياً أول بأول.</p>
+          </div>
+          <div class="stats">
+            <div class="stat"><b id="sVid">0</b><span>محاضرة فيديو</span></div>
+            <div class="stat"><b id="sPdf">0</b><span>ملف PDF</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card toolbar">
+        <div class="pills" id="pills"></div>
+        <div class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="q" class="input" type="search" placeholder="ابحث باسم المحاضرة أو الدكتور…" autocomplete="off"></div>
+      </div>
+      <div class="grid" id="lecGrid"></div>
+    </section>
+
+    <section id="tab-notifications" class="section hidden">
+      <div class="card panel">
+        <div class="panel-h"><div>
+          <h3><span class="ico warn"><i class="fa-solid fa-bell"></i></span>إشعارات الشعبة</h3>
+          <p>تنبيهات من دكاترة ومهندسي الشعبة وإدارة المعهد</p></div></div>
+        <div class="list" id="notifList"></div>
+      </div>
+    </section>
+
+    <section id="tab-profile" class="section hidden">
+      <div class="card profile">
+        <div class="profile-h">
+          <div class="av"><i class="fa-solid fa-user-graduate"></i></div>
+          <div><small>بطاقة الطالب الرقمية</small><h3 id="pDept"></h3><span class="chip" id="pYear"></span></div>
+        </div>
+        <div class="profile-b">
+          <div class="two">
+            <div class="box"><small>القسم</small><b id="pBoxDept"></b></div>
+            <div class="box code"><small>كود الدخول الخاص بك</small><b id="pCode"></b>
+              <button class="btn btn-soft btn-sm" style="margin-inline-start:8px" data-act="copy-session"><i class="fa-regular fa-copy"></i></button></div>
+          </div>
+          <div class="box">
+            <small><i class="fa-solid fa-book-bookmark"></i> المواد المقررة على شعبتك</small>
+            <div class="tags" id="pSubjects" style="margin-top:8px"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== لوحة المحاضر / الأدمن ===== -->
+  <div id="adminView" class="hidden section">
+    <div class="banner">
+      <div class="banner-in">
+        <div>
+          <span class="pillw"><i class="fa-solid fa-shield-halved"></i><span id="aRole"></span></span>
+          <h2 id="aTitle"></h2>
+          <p>ارفع محاضرات الفيديو (YouTube أو Google Drive) وملفات الـ PDF، وابعت إشعارات فورية لطلابك.</p>
+        </div>
+        <div id="saBox" class="sa hidden">
+          <div><label for="saSelect">الشعبة المُدارة</label><select id="saSelect"></select></div>
+          <button class="btn btn-warn btn-sm" data-act="open-codes"><i class="fa-solid fa-key"></i>إدارة الأكواد</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-grid">
+      <div class="card panel">
+        <div class="panel-h"><div>
+          <h3><span class="ico"><i class="fa-solid fa-cloud-arrow-up"></i></span>رفع محاضرة أو ملف جديد</h3>
+          <p>يُنشر فوراً لطلاب الشعبة</p></div></div>
+
+        <form id="lecForm" class="form-grid" autocomplete="off">
+          <div class="field"><label for="fTitle">عنوان المحاضرة <span class="req">*</span></label>
+            <input id="fTitle" class="input" required maxlength="140" placeholder="مثال: المحاضرة الأولى — ماكينات الأوفست"></div>
+          <div class="field"><label for="fSubject">المادة <span class="req">*</span></label>
+            <input id="fSubject" class="input" list="subjList" required maxlength="80" placeholder="اكتب أو اختر المادة"><datalist id="subjList"></datalist></div>
+          <div class="field"><label for="fInstr">المحاضر <span class="req">*</span></label>
+            <input id="fInstr" class="input" required maxlength="80" placeholder="د. / م. …"></div>
+          <div class="field"><label for="fDate">التاريخ</label><input id="fDate" type="date" class="input"></div>
+
+          <div class="media-box v full">
+            <label for="fVideo"><i class="fa-brands fa-youtube" style="color:#ff0033"></i><i class="fa-brands fa-google-drive" style="color:#1fa463"></i>رابط الفيديو (YouTube / Google Drive) — اختياري</label>
+            <input id="fVideo" class="input ltr" type="url" placeholder="https://youtu.be/… أو https://drive.google.com/file/d/…">
+            <p class="hint">المنصة بتتعرف على نوع الرابط وتشغّله جوه الصفحة. في Drive لازم الملف يكون "أي شخص لديه الرابط".</p>
+          </div>
+          <div class="media-box p full">
+            <label for="fPdf"><i class="fa-solid fa-file-pdf" style="color:#e0454b"></i>رابط ملف PDF (Drive أو رابط مباشر) — اختياري</label>
+            <input id="fPdf" class="input ltr" type="url" placeholder="https://drive.google.com/file/d/…/view">
+          </div>
+          <div class="field full"><label for="fNotes">ملاحظات للطلاب (اختياري)</label>
+            <textarea id="fNotes" class="input" maxlength="400" placeholder="مثال: المحاضرة دي مهمة جداً للميدتيرم"></textarea></div>
+          <button class="btn btn-primary btn-block full" type="submit"><i class="fa-solid fa-paper-plane"></i>نشر لطلاب الشعبة</button>
+        </form>
+      </div>
+
+      <div class="card panel">
+        <div class="panel-h"><div>
+          <h3><span class="ico warn"><i class="fa-solid fa-bullhorn"></i></span>إشعار للطلاب</h3>
+          <p>كويز، تسليم شيت، تغيير قاعة…</p></div></div>
+        <form id="notifForm" class="list" autocomplete="off">
+          <div class="field"><label for="nTitle">العنوان</label><input id="nTitle" class="input" required maxlength="100" placeholder="هام بخصوص محاضرة الغد"></div>
+          <div class="field"><label for="nBody">التفاصيل</label><textarea id="nBody" class="input" required maxlength="500" placeholder="اكتب رسالة التنبيه…"></textarea></div>
+          <button class="btn btn-warn btn-block" type="submit"><i class="fa-solid fa-bell"></i>إرسال الآن</button>
+        </form>
+        <div class="box" style="margin-top:16px">
+          <small>الشعبة الحالية</small><b id="aDeptInfo" style="font-size:.9rem"></b>
+          <div id="aCodeRow" class="hidden" style="margin-top:8px;font-size:.78rem;font-weight:800;color:var(--muted)">كود الطلاب: <span id="aStudentCode" class="code-val"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card panel" style="margin-top:18px">
+      <div class="panel-h"><h3><span class="ico"><i class="fa-solid fa-list-check"></i></span>المحاضرات المرفوعة</h3><span class="chip" id="aCount">0</span></div>
+      <div class="list" id="aLecs"></div>
+    </div>
+
+    <div class="card panel" style="margin-top:18px">
+      <div class="panel-h"><h3><span class="ico warn"><i class="fa-solid fa-clock-rotate-left"></i></span>الإشعارات المُرسلة</h3></div>
+      <div class="list" id="aNotifs"></div>
+    </div>
+  </div>
+  <!-- ===== صفحة المحاضرة (المحتوى) ===== -->
+  <section id="pageLecture" class="section hidden">
+    <div class="crumbs"><button class="btn btn-ghost btn-sm" data-act="go-back"><i class="fa-solid fa-arrow-right"></i>رجوع</button></div>
+    <div id="lpBody"></div>
+  </section>
+
+  <!-- ===== صفحة المشغّل الكاملة ===== -->
+  <section id="pageWatch" class="hidden">
+    <header class="wp-bar">
+      <button class="icon-btn" data-act="go-back" aria-label="رجوع"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="t"><small id="wpSubject"></small><h1 id="wpTitle"></h1></div>
+      <button class="icon-btn" data-act="theme" aria-label="الوضع الأسود / الأبيض"><i class="fa-solid fa-moon js-theme-ic"></i></button>
+    </header>
+    <div class="wp-grid" id="wpGrid">
+      <div class="wp-main">
+      <div class="player" id="vp" data-mode="custom" data-state="loading">
+        <div class="vp-stage" id="vpStage"></div>
+        <div class="vp-shield" id="vpShield"></div>
+        <div class="vp-cover"><div class="vp-spin"></div><div class="vp-big"><i class="fa-solid fa-play" id="vpBigIc"></i></div></div>
+        <div class="vp-flash" id="vpFlash"></div>
+        <div class="vp-corner"></div>
+        <div class="vp-ui" id="vpUI">
+          <div class="vp-seek" id="vpSeek"><div class="vp-buf" id="vpBuf"></div><div class="vp-prog" id="vpProg"></div><div class="vp-knob" id="vpKnob"></div></div>
+          <div class="vp-row">
+            <button data-vp="toggle" aria-label="تشغيل / إيقاف"><i class="fa-solid fa-play" id="vpToggleIc"></i></button>
+            <button data-vp="back" aria-label="رجوع 10 ثواني"><i class="fa-solid fa-rotate-left"></i></button>
+            <button data-vp="fwd" aria-label="تقديم 10 ثواني"><i class="fa-solid fa-rotate-right"></i></button>
+            <span class="vp-time" id="vpTime">0:00 / 0:00</span>
+            <span class="vp-sp"></span>
+            <div class="vp-vol"><button data-vp="mute" aria-label="كتم"><i class="fa-solid fa-volume-high" id="vpMuteIc"></i></button><input type="range" id="vpVol" min="0" max="100" value="100" aria-label="مستوى الصوت"></div>
+            <div class="vp-menu-wrap"><button class="vp-rate" data-vp="speed" id="vpRateBtn" aria-label="السرعة">1x</button><div class="vp-menu hidden" id="vpMenu"></div></div>
+            <button data-vp="fs" aria-label="ملء الشاشة"><i class="fa-solid fa-expand" id="vpFsIc"></i></button>
+          </div>
+        </div>
+      </div>
+        <p class="player-note" id="plNote"></p>
+        <div class="card wp-info" id="wpInfo"></div>
+      </div>
+      <aside class="card wp-side" id="wpSide">
+        <h3 class="sec-title"><i class="fa-solid fa-list-ul"></i><span id="wpListTitle">محاضرات المادة</span></h3>
+        <div class="rel" id="wpList"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===== صفحة قراءة الـ PDF ===== -->
+  <section id="pagePdf" class="hidden">
+    <header class="wp-bar">
+      <button class="icon-btn" data-act="go-back" aria-label="رجوع"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="t"><small id="pdSubject"></small><h1 id="pdTitle"></h1></div>
+      <a id="pdExt" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i><span class="hide-sm">فتح خارجياً</span></a>
+    </header>
+    <div class="pdf-stage" id="pdfStage"></div>
+    <p class="player-note" id="pdNote"></p>
+  </section>
+</main>
+
+<nav class="bottom-nav" id="bottomNav" aria-label="التنقل">
+  <button class="bn active" data-act="tab" data-tab="lectures"><i class="fa-solid fa-circle-play"></i><span>المحاضرات</span></button>
+  <button class="bn" data-act="tab" data-tab="notifications"><i class="fa-solid fa-bell"></i><span>الإشعارات</span><span class="badge-n js-unread hidden">0</span></button>
+  <button class="bn" data-act="tab" data-tab="profile"><i class="fa-solid fa-id-card"></i><span>بياناتي</span></button>
+</nav>
+
+<footer id="footer" class="hidden">
+  <div class="foot">
+    <div class="l"><span class="m"><i class="fa-solid fa-graduation-cap"></i></span><span>منصة المعهد الفني الصناعي بالصحافة © 2026</span></div>
+    <div class="js-signature"></div>
+  </div>
+</footer>
+
+<!-- ===== إدارة الأكواد (سوبر أدمن) ===== -->
+<div id="codesModal" class="overlay hidden" data-act="backdrop-codes">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="cmTitle">
+    <div class="modal-h light">
+      <div><h3 id="cmTitle"><i class="fa-solid fa-key" style="color:var(--gold)"></i> إدارة الأكواد</h3>
+        <p style="font-size:.72rem;color:var(--muted);font-weight:600">الأكواد مخزّنة مشفّرة في السحابة. الكود الظاهر هنا محفوظ على جهازك فقط وقت التوليد.</p></div>
+      <button class="icon-btn" data-act="close-codes" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-b">
+      <form id="docForm" class="card" style="padding:16px;display:grid;gap:12px" autocomplete="off">
+        <h4 style="font-size:.85rem;font-weight:900"><i class="fa-solid fa-user-tie" style="color:var(--brand1)"></i> كود لدكتور / مهندس يفتح مادة واحدة فقط</h4>
+        <div class="form-grid" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
+          <input id="dName" class="input" required maxlength="60" placeholder="اسم الدكتور / المهندس">
+          <select id="dDept" class="input" required></select>
+          <input id="dSubj" class="input" required maxlength="80" placeholder="اسم المادة">
+          <input id="dPin" class="input ltr" inputmode="numeric" pattern="\d{9}" maxlength="9" placeholder="9 أرقام (اتركه فارغاً للتوليد)">
+        </div>
+        <button class="btn btn-primary" type="submit" style="justify-self:start"><i class="fa-solid fa-plus"></i>حفظ الكود</button>
+      </form>
+
+      <div><h4 style="font-size:.85rem;font-weight:900;margin-bottom:8px">أكواد المواد الفردية</h4><div class="list" id="docList"></div></div>
+
+      <div><h4 style="font-size:.85rem;font-weight:900;margin-bottom:8px">أكواد الشعب الـ 15</h4>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>الفرقة</th><th>الشعبة</th><th style="text-align:center">كود الطلاب</th><th style="text-align:center">كود المحاضر</th></tr></thead>
+          <tbody id="codeRows"></tbody></table></div></div>
+    </div>
+  </div>
+</div>
+
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<noscript><p style="padding:24px;text-align:center">المنصة تحتاج تفعيل JavaScript.</p></noscript>
+
+<script>
+'use strict';
+/* =====================================================
+   الإعدادات العامة
+===================================================== */
+const DEV = {
+  tag: 'طلاب أولى قسم طباعة',
+  elgizawy: { label: 'Eng. El-Gizawy', wa: '201090747536', show: '01090747536' },
+  ahmed:    { label: 'Ahmed',          wa: '201128381838', show: '01128381838' }
+};
+const SALT = 'alsahafa::';
+// بصمة (SHA-256) لكود السوبر أدمن — الكود نفسه غير مكتوب في الملف
+const SUPER_HASH = '06b1aa3e2b5d871ddc5053ec3c4e05d91eb2659fc16b18cb2722728ee02df8be';
+const KEY = { data:'alsahafa_portal_v4', vault:'alsahafa_vault_v4', theme:'alsahafa_theme', sound:'alsahafa_sound', lock:'alsahafa_lock_v4', seen:'alsahafa_seen_v4_', session:'alsahafa_session_v4' };
+const PIN_LEN = 9;
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl = u => { try { const x = new URL(String(u).trim()); return (x.protocol === 'https:' || x.protocol === 'http:') ? x.href : ''; } catch { return ''; } };
+const storageOK = (() => { try { localStorage.setItem('__t', '1'); localStorage.removeItem('__t'); return true; } catch { return false; } })();
+const MIRROR = new Set(['alsahafa_session_v4', 'alsahafa_theme', 'alsahafa_sound', 'alsahafa_lock_v4']);
+const nameStore = () => { try { return window.name.startsWith('AS:') ? JSON.parse(window.name.slice(3)) : {}; } catch { return {}; } };
+const lsGet = (k, d = null) => {
+  if (storageOK) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } }
+  const m = nameStore(); return k in m ? m[k] : d;          // لو المتصفح مانع التخزين (فتح من واتساب مثلاً) نستخدم الجلسة الحالية
+};
+const lsSet = (k, v) => {
+  if (storageOK) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} return; }
+  if (!MIRROR.has(k)) return;
+  const m = nameStore(); if (v === null || v === undefined) delete m[k]; else m[k] = v;
+  try { window.name = 'AS:' + JSON.stringify(m); } catch {}
+};
+const uid = p => p + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+const todayStr = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+const fmtDate = s => { try { return new Date(s + 'T00:00:00').toLocaleDateString('ar-EG', { day:'numeric', month:'long', year:'numeric' }); } catch { return s || ''; } };
+
+/* =====================================================
+   SHA-256 (نسخة صغيرة تعمل حتى بدون HTTPS)
+===================================================== */
+const sha256 = (() => {
+  const primes = []; for (let n = 2; primes.length < 64; n++) if (primes.every(p => n % p)) primes.push(n);
+  const frac = x => Math.floor((x - Math.floor(x)) * 4294967296);
+  const K = primes.map(p => frac(Math.cbrt(p)));
+  const H0 = primes.slice(0, 8).map(p => frac(Math.sqrt(p)));
+  const rr = (x, n) => (x >>> n) | (x << (32 - n));
+  return str => {
+    const bytes = new TextEncoder().encode(str), l = bytes.length;
+    const total = ((l + 9 + 63) >> 6) << 6, buf = new Uint8Array(total);
+    buf.set(bytes); buf[l] = 0x80;
+    const dv = new DataView(buf.buffer);
+    dv.setUint32(total - 8, Math.floor(l * 8 / 4294967296));
+    dv.setUint32(total - 4, (l * 8) >>> 0);
+    const h = H0.slice(), w = new Uint32Array(64);
+    for (let o = 0; o < total; o += 64) {
+      for (let i = 0; i < 16; i++) w[i] = dv.getUint32(o + i * 4);
+      for (let i = 16; i < 64; i++) {
+        const a = w[i-15], b = w[i-2];
+        w[i] = (w[i-16] + (rr(a,7) ^ rr(a,18) ^ (a >>> 3)) + w[i-7] + (rr(b,17) ^ rr(b,19) ^ (b >>> 10))) >>> 0;
+      }
+      let [a,b,c,d,e,f,g,k] = h;
+      for (let i = 0; i < 64; i++) {
+        const t1 = (k + (rr(e,6) ^ rr(e,11) ^ rr(e,25)) + ((e & f) ^ (~e & g)) + K[i] + w[i]) >>> 0;
+        const t2 = ((rr(a,2) ^ rr(a,13) ^ rr(a,22)) + ((a & b) ^ (a & c) ^ (b & c))) >>> 0;
+        k = g; g = f; f = e; e = (d + t1) >>> 0; d = c; c = b; b = a; a = (t1 + t2) >>> 0;
+      }
+      [a,b,c,d,e,f,g,k].forEach((v, i) => h[i] = (h[i] + v) >>> 0);
+    }
+    return h.map(x => x.toString(16).padStart(8, '0')).join('');
+  };
+})();
+const H = pin => sha256(SALT + pin);
+
+/* =====================================================
+   بيانات الشعب (الأكواد مخزّنة كبصمات فقط)
+   [id, الفرقة, الاسم, بصمة كود الطالب, بصمة كود المحاضر, المواد]
+===================================================== */
+const DEPT_SEED = [
+ ['y1_printing',1,'تكنولوجيا الطباعة','bad4720450d90571083381f3107cc6e087bbe53a34545026dbf60f521da86432','46aaa1822d5d1e1628e2f65a86b3cd7e895d44be8e2e098e8c01135c3bbc839e',['تكنولوجيا الطباعة العامة','ماكينات الطباعة البارزة والغائرة','كيمياء الأحبار والورق','التصميم وفصل الألوان','الرسم الفني والأمن الصناعي']],
+ ['y1_hvac',1,'تبريد وتكييف','ae40ca98112f6e2a1ab24a0848f8e107b195be989dae0141f7a82610f60ecca5','b216e83c92f2d87383862b29f6aef9261e91ff5db2f90d14850cd95c57c16827',['أساسيات التبريد والتكييف','الديناميكا الحرارية','دوائر الكهرباء والتحكم','الرسم الفني التخصصي','تكنولوجيا الورش']],
+ ['y1_auto',1,'ميكانيكا سيارات','228dd8f4623d427142fb9fce4413bbf1c101614a4c40678b623c497dfd5f723c','d7134c72d602717d7bfaee950376fb207ea487abfc3c0f7651a13e682111f4de',['محركات الاحتراق الداخلي','كهرباء وإلكترونيات السيارات','نقل الحركة والشاسيه','تكنولوجيا الورش والمقاييس','الرسم الهندسي']],
+ ['y1_metals',1,'تشغيل معادن','5a2cd05f45c1c6dc36b789fb4ac72d3c9e55bac78383ee7abf1a181e67a59812','9a2ac03309a36e7e393947f95d660ba2eb17971883765a1dd268393a70d011ba',['تكنولوجيا التشغيل على المخارط','خواص واختبار المعادن','القياسات الدقيقة والمترولوجيا','الرسم الهندسي والميكانيكي','الأمن الصناعي']],
+ ['y1_it',1,'حاسبات وشبكات','ea72bbdb668e65df087f58dbf1daa016f306e2bc23a08b0755de05c9de656fd9','f25da90bf3fe51a95ac5c922639b5ef1507c4a9c5c4aa3704a6c8ae05f3f036f',['مقدمة في البرمجة وتركيب الحاسب','أساسيات شبكات الحاسب','النظم الرقمية والمنطقية','صيانة وتجميع الحاسبات','رياضيات الحاسب']],
+ ['y1_elec_net_mach',1,'شبكات وآلات كهربية','20d9a6664e588b36ea25d543754237da5d0d279854661d5a54b8e3f8047d8440','58286a13aaa21cb7dc948f0dfaeb1b438f134626d8b0739d44158c1ee00fd9f6',['الدوائر الكهربية الأساسية','الآلات والمحولات الكهربية','القياسات الكهربية','هندسة الشبكات الكهربية','الرسم الكهربي']],
+ ['y1_electronics',1,'أجهزة إلكترونية','39c9eb2e72192c73e544bed5d464b387101222d9c8c66454d576bf5283c0e74e','3f9876962d8712db93415ae686aa74de5a0f08ac4acfed2efdd774bff742a431',['العناصر والدوائر الإلكترونية','الإلكترونيات الرقمية','أجهزة القياس والمعايرة','تكنولوجيا الورش الإلكترونية','الرسم الفني الإلكتروني']],
+ ['y2_printing',2,'تكنولوجيا الطباعة','752f15b8e027a2825ace2ec47dac4f64fc628b7163e98a716bf72fed4b4651bc','2fcc0fb7002a3653f34af30f007f7a9bedf8add18bab7c42776394fca3e8f5c5',['تكنولوجيا طباعة الأوفست الحديثة','الطباعة الرقمية والتغليف','مراقبة الجودة في الطباعة','تجهيزات ما بعد الطباعة والتجليد','إدارة وتكاليف المطابع']],
+ ['y2_hvac',2,'تبريد وتكييف','e73ca2aadc57ceaf29e55b5b3aa1dac1cdf28d5684933e8e9a67f17da9f5c26d','357dc39269b8b3969bb29528451c8412b810c59a5246b3cd942bf465afeec5d8',['تكييف الهواء المركزي','غرف التبريد والتجميد الصناعي','التحكم الآلي وأعطال التبريد','حساب أحمال التكييف','مشروع التخرج']],
+ ['y2_auto',2,'ميكانيكا سيارات','37b8f281dd8815ebd160fde00ebf9a7d1cc787116a3e3054f350d487c3343c77','8a00b8f3dabe110046ef813e1d9a87d2ccbf3785ce200740f370f1e404726a13',['تشخيص أعطال المحركات بالكمبيوتر','منظومات الحقن الإلكتروني','الهايبرد والسيارات الحديثة','الفرامل المانعة للانغلاق ABS','إدارة مراكز الخدمة']],
+ ['y2_metals',2,'تشغيل معادن','61f7ea87e9ac2773f86f87e6f6ace4bf6b58307f241541d860c770269e68e4bb','57b67873c668f6587a1886b79941d8c379147dc90a37ce632a68910e4df8eb36',['ماكينات التحكم الرقمي CNC','تصميم الاسطمبات والقوالب','عمليات التشكيل واللحام المتقدم','تخطيط ومراقبة الإنتاج','مشروع التخرج']],
+ ['y2_it',2,'حاسبات وشبكات','7f97586274dbbaf0fbbd88ea1207fe0cca3ad1a63776d5b9eb82b774ffe46148','bd7bb69106be7648d351b3434479ec922fc30b569c10474c700958314549e91a',['إدارة وتأمين الشبكات','قواعد البيانات وتطوير الويب','المتحكمات الدقيقة والميكروبروسيسور','أنظمة التشغيل المتقدمة','مشروع التخرج']],
+ ['y2_power_net',2,'شبكات قوى كهربية','b3eae82893d5a999d30a64dcc959c6ed30d3615bf07613a0912e699a4680a02e','a5cda4939692981fc9d9f7840250c3479895648ab7bc556b425f8b338c97bc0d',['نقل وتوزيع الطاقة الكهربية','وقاية شبكات القوى الكهربية','محطات التوليد والمحولات','كابلات الجهد العالي والمتوسط','اقتصاديات القوى']],
+ ['y2_elec_mach',2,'آلات كهربية','b578dabec28f4b5f2f8893cdda6b21cc21faa732ab49e0c6f2a5cbfdf13b1227','81ba56bb4cb9fb6256ca2fc783f0f8bc95003b5707190b2a5a14386818a71a9b',['الآلات الحثية والتزامنية','إلكترونيات القوى والتحكم','لف وصيانة المحركات الكهربية','التحكم المنطقي المبرمج PLC','مشروع التخرج']],
+ ['y2_electronics',2,'أجهزة إلكترونية','a100dc1c6e4359d84d42fa61e326a655df8e46e3c10ba7c0988137f4ee9c2c52','61fecf22315066545aeb7aeeccd115acd081bf21066985e4724b59daadb42c54',['نظم الاتصالات والميكروويف','الميكروكنترولر والأنظمة المدمجة','صيانة الشاشات والأجهزة الدقيقة','معالجة الإشارات الرقمية','مشروع التخرج']]
+];
+const YEAR = { 1:'الفرقة الأولى', 2:'الفرقة الثانية' };
+
+function defaultData() {
+  return {
+    departments: DEPT_SEED.map((r, i) => ({ id:r[0], order:i + 1, year:YEAR[r[1]], name:r[2], studentHash:r[3], instructorHash:r[4], subjects:r[5].slice() })),
+    customInstructors: [],
+    lectures: [],
+    notifications: [{ id:'n_welcome', deptId:'y1_printing', title:'أهلاً بكم في المنصة الرسمية 🎓',
+      body:'تم إطلاق المنصة لتسهيل الوصول لكل المحاضرات وملفات الـ PDF الخاصة بشعبتكم. أي محاضرة جديدة هتظهر هنا أول بأول.',
+      date:todayStr, createdAt:Date.now() }]
+  };
+}
+
+let portal = (() => {
+  const d = lsGet(KEY.data);
+  return (d && Array.isArray(d.departments) && d.departments.length === 15 && d.departments[0].studentHash) ? d : defaultData();
+})();
+let session = null;
+let subjectFilter = 'ALL';
+let cloudReady = false;
+
+const persist = () => lsSet(KEY.data, portal);
+const byId = id => portal.departments.find(d => d.id === id);
+const curDept = () => (session && byId(session.deptId)) || portal.departments[0];
+
+/* =====================================================
+   المزامنة مع Firebase
+===================================================== */
+function cloudCall(fn) {
+  if (!window.cloud) return;
+  Promise.resolve().then(fn).catch(err => {
+    console.warn('Cloud sync failed:', err);
+    toast('تعذّرت المزامنة مع السحابة — اتحفظ على جهازك فقط', 'error');
+  });
+}
+const clean = v => JSON.parse(JSON.stringify(v));
+const cloudPut = (path, v) => cloudCall(() => window.cloud.put(path, clean(v)));
+const cloudDel = path => cloudCall(() => window.cloud.del(path));
+const toMap = arr => Object.fromEntries(arr.map(x => [x.id, x]));
+
+function cloudSeed() {
+  cloudPut('', { departments: toMap(portal.departments), customInstructors: toMap(portal.customInstructors), lectures: toMap(portal.lectures), notifications: toMap(portal.notifications) });
+}
+/* نقل بيانات المنصة القديمة (محاضرات / إشعارات / أكواد المواد) مرة واحدة عند أول تشغيل */
+const asList = x => Array.isArray(x) ? x.filter(Boolean) : Object.values(x || {});
+function migrateLegacy(old) {
+  const base = Date.now(), seen = new Set();
+  const stamp = (o, i) => { const n = parseInt(String(o.id || '').replace(/\D/g, ''), 10); return n > 1e12 ? n : (Date.parse(o.date) || base) - i * 1000; };
+  const isDemo = o => /_demo_/.test(String(o.id || ''));
+  asList(old.lectures).filter(l => l.title && l.deptId && !isDemo(l)).forEach((l, i) => {
+    if (seen.has(l.id)) return; seen.add(l.id);
+    portal.lectures.push({ id: String(l.id || uid('l_')), deptId: l.deptId, title: String(l.title), subject: String(l.subject || ''), instructor: String(l.instructor || ''),
+      date: l.date || todayStr, videoUrl: safeUrl(l.videoUrl), pdfUrl: safeUrl(l.pdfUrl), notes: String(l.notes || ''), createdAt: stamp(l, i) });
+  });
+  asList(old.notifications).filter(n => n.title && n.deptId && !isDemo(n)).forEach((n, i) =>
+    portal.notifications.push({ id: String(n.id || uid('n_')), deptId: n.deptId, title: String(n.title), body: String(n.body || ''), date: n.date || todayStr, createdAt: stamp(n, i) }));
+  asList(old.customInstructors).filter(c => c.name && byId(c.deptId) && /^\d{9}$/.test(String(c.pin))).forEach(c =>
+    portal.customInstructors.push({ id: String(c.id || uid('c_')), name: String(c.name), deptId: c.deptId, subject: String(c.subject || ''), pinHash: H(String(c.pin)) }));
+  asList(old.departments).forEach(od => {                       // المواد اللي اتضافت قبل كده
+    const d = byId(od.id); if (!d) return;
+    (od.subjects || []).forEach(sbj => { if (sbj && !d.subjects.includes(sbj)) d.subjects.push(sbj); });
+  });
+  portal.lectures.sort((a, b) => b.createdAt - a.createdAt); portal.notifications.sort((a, b) => b.createdAt - a.createdAt);
+}
+let bootstrapping = false;
+async function cloudBootstrap() {
+  if (bootstrapping) return; bootstrapping = true;
+  try {
+    const old = window.cloud && window.cloud.legacy ? await window.cloud.legacy() : null;
+    if (old) { migrateLegacy(old); persist(); if (session) refreshView(); }
+  } catch (err) { console.warn('Legacy import skipped:', err); }
+  cloudSeed();
+}
+window.applyCloud = function (val) {
+  if (!val || !val.departments) { cloudBootstrap(); return; }
+  const arr = o => Object.values(o || {});
+  const depts = arr(val.departments).filter(d => d && d.id).sort((a, b) => a.order - b.order).map(d => ({ ...d, subjects: d.subjects || [] }));
+  if (!depts.length) { cloudBootstrap(); return; }
+  portal = {
+    departments: depts,
+    customInstructors: arr(val.customInstructors),
+    lectures: arr(val.lectures).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0)),
+    notifications: arr(val.notifications).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0))
+  };
+  persist(); cloudReady = true;
+  if (session) {
+    if (!resolvePin(session.pin)) { toast('تم تغيير الكود — سجّل الدخول من جديد', 'error'); logout(); return; }
+    refreshView(); if (!$('#codesModal').classList.contains('hidden')) renderCodes();
+  } else tryRestore();
+};
+window.setCloudState = function (state) {
+  const txt = { online:'متصل ☁️', offline:'غير متصل', connecting:'جاري الاتصال…' }[state];
+  $$('.js-cloud').forEach(el => { el.dataset.state = state; $('.js-cloud-text', el).textContent = txt; });
+};
+
+/* =====================================================
+   الصوت / المظهر / التنبيهات
+===================================================== */
+let soundOn = lsGet(KEY.sound, true), actx = null;
+const TONES = {
+  tap:    [[540, 0, .05, 'sine', .08]],
+  unlock: [[523, 0, .2, 'triangle', .14], [659, .07, .2, 'triangle', .14], [784, .14, .2, 'triangle', .14], [1047, .21, .26, 'triangle', .14]],
+  success:[[587, 0, .18, 'sine', .14], [880, .09, .22, 'sine', .14]],
+  error:  [[240, 0, .14, 'sawtooth', .1], [175, .11, .18, 'sawtooth', .1]]
+};
+function playSound(type) {
+  if (!soundOn) return;
+  try {
+    const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return;
+    actx = actx || new AC(); if (actx.state === 'suspended') actx.resume();
+    const t0 = actx.currentTime;
+    (TONES[type] || []).forEach(([f, off, dur, wave, vol]) => {
+      const o = actx.createOscillator(), g = actx.createGain();
+      o.type = wave; o.frequency.value = f;
+      g.gain.setValueAtTime(vol, t0 + off); g.gain.exponentialRampToValueAtTime(.001, t0 + off + dur);
+      o.connect(g); g.connect(actx.destination); o.start(t0 + off); o.stop(t0 + off + dur + .02);
+    });
+  } catch {}
+}
+const buzz = ms => { try { navigator.vibrate && navigator.vibrate(ms); } catch {} };
+
+function toast(msg, type = 'success', ms = 3200) {
+  const el = document.createElement('div');
+  el.className = 'toast ' + type;
+  const ic = { success:'fa-circle-check', error:'fa-circle-exclamation', info:'fa-circle-info' }[type] || 'fa-circle-check';
+  el.innerHTML = `<i class="fa-solid ${ic}"></i><span></span>`;
+  $('span', el).textContent = msg;
+  $('#toasts').appendChild(el);
+  setTimeout(() => { el.style.transition = 'opacity .25s'; el.style.opacity = '0'; setTimeout(() => el.remove(), 260); }, ms);
+}
+
+function applyTheme(t) {
+  document.documentElement.dataset.theme = t;
+  $$('.js-theme-ic').forEach(i => i.className = 'fa-solid js-theme-ic ' + (t === 'dark' ? 'fa-sun' : 'fa-moon'));
+  const m = $('meta[name="theme-color"]'); if (m) m.content = t === 'dark' ? '#09090b' : '#ffffff';
+}
+function applySoundIcon() {
+  $$('.js-sound-ic').forEach(i => i.className = 'fa-solid js-sound-ic ' + (soundOn ? 'fa-volume-high' : 'fa-volume-xmark'));
+}
+applySoundIcon();
+applyTheme(lsGet(KEY.theme) === 'dark' ? 'dark' : 'light');
+
+function renderSignature() {
+  const msg = encodeURIComponent('السلام عليكم، أنا من منصة المعهد الفني الصناعي بالصحافة');
+  const link = (d, cls, inner) => `<a class="${cls}" href="https://wa.me/${d.wa}?text=${msg}" target="_blank" rel="noopener noreferrer" aria-label="واتساب ${esc(d.label)}">${inner}</a>`;
+  const html = `<div class="sig">
+    <span class="name">Developed by ${link(DEV.elgizawy, 'who', esc(DEV.elgizawy.label))} &amp; ${link(DEV.ahmed, 'who', esc(DEV.ahmed.label))}</span><span class="sep">|</span>
+    <span class="tag">${esc(DEV.tag)}</span>
+</div>`;
+  $$('.js-signature').forEach(el => el.innerHTML = html);
+}
+
+/* =====================================================
+   قفل الدخول (9 أرقام) + حماية من التخمين
+===================================================== */
+let entered = '', showPin = false;
+const lockState = lsGet(KEY.lock, { fails: 0, until: 0 });
+
+function buildPinUI() {
+  const p = $('#pin'); p.innerHTML = '';
+  for (let i = 0; i < PIN_LEN; i++) {
+    p.appendChild(document.createElement('b'));
+    if (i === 2 || i === 5) p.appendChild(Object.assign(document.createElement('i'), { className: 'sep' }));
+  }
+  const keys = ['1','2','3','4','5','6','7','8','9','clear','0','back'];
+  $('#keypad').innerHTML = keys.map(k =>
+    k === 'clear' ? `<button class="key fn clear" data-act="clear">مسح</button>` :
+    k === 'back'  ? `<button class="key fn" data-act="back" aria-label="حذف"><i class="fa-solid fa-delete-left"></i></button>` :
+    `<button class="key" data-act="key" data-key="${k}">${k}</button>`).join('');
+  drawPin();
+}
+function drawPin() {
+  $$('#pin b').forEach((b, i) => {
+    const on = i < entered.length;
+    b.classList.toggle('on', on);
+    b.textContent = on ? (showPin ? entered[i] : '•') : '';
+  });
+}
+const lockedFor = () => Math.max(0, Math.ceil((lockState.until - Date.now()) / 1000));
+let lockTimer = null;
+function showLockMsg() {
+  const left = lockedFor(), el = $('#pinErr');
+  if (left > 0) {
+    el.textContent = `محاولات كتير غلط — جرّب بعد ${left} ثانية`; el.dataset.kind = 'lock';
+    clearTimeout(lockTimer); lockTimer = setTimeout(showLockMsg, 1000);
+  } else if (el.dataset.kind === 'lock') { el.textContent = ''; el.dataset.kind = ''; }
+}
+function pressKey(d) {
+  if (lockedFor() > 0) { showLockMsg(); return; }
+  if (entered.length >= PIN_LEN) return;
+  playSound('tap'); buzz(8);
+  $('#pinErr').textContent = '';
+  entered += d; drawPin();
+  if (entered.length === PIN_LEN) setTimeout(verifyPin, 120);
+}
+const backKey = () => { if (entered) { playSound('tap'); entered = entered.slice(0, -1); drawPin(); } };
+const clearKey = () => { playSound('tap'); entered = ''; drawPin(); $('#pinErr').textContent = ''; };
+
+function resolvePin(code) {
+  const h = H(code);
+  if (h === SUPER_HASH) return { role:'superadmin', deptId:portal.departments[0].id, forcedSubject:null, doctorName:null, pin:code };
+  const cd = portal.customInstructors.find(d => d.pinHash === h);
+  if (cd) return { role:'instructor', deptId:cd.deptId, forcedSubject:cd.subject, doctorName:cd.name, pin:code };
+  const id = portal.departments.find(d => d.instructorHash === h);
+  if (id) return { role:'instructor', deptId:id.id, forcedSubject:null, doctorName:null, pin:code };
+  const sd = portal.departments.find(d => d.studentHash === h);
+  if (sd) return { role:'student', deptId:sd.id, forcedSubject:null, doctorName:null, pin:code };
+  return null;
+}
+function verifyPin() {
+  const s = resolvePin(entered);
+  if (s) { lockState.fails = 0; lockState.until = 0; lsSet(KEY.lock, lockState); login(s); return; }
+
+  playSound('error'); buzz(60);
+  lockState.fails++;
+  if (lockState.fails >= 5) lockState.until = Date.now() + Math.min(600, 30 * 2 ** (lockState.fails - 5)) * 1000;
+  lsSet(KEY.lock, lockState);
+  const pin = $('#pin'); pin.classList.add('bad', 'shake');
+  $('#pinErr').textContent = 'الكود غير صحيح، راجع الكود المكوّن من 9 أرقام';
+  setTimeout(() => { pin.classList.remove('bad', 'shake'); entered = ''; drawPin(); if (lockedFor() > 0) showLockMsg(); }, 520);
+}
+
+function login(s, silent = false) {
+  session = s; subjectFilter = 'ALL';
+  lsSet(KEY.session, { pin: s.pin });                       // يفضل مسجّل دخول حتى بعد الريفرش
+  const show = () => {
+    $('#lock').classList.add('hidden'); $('#lock').style.opacity = '1';
+    entered = ''; drawPin();
+    ['topbar', 'main', 'footer'].forEach(id => $('#' + id).classList.remove('hidden'));
+    setupSession(silent); window.scrollTo(0, 0);
+  };
+  if (silent) { show(); return; }
+  playSound('unlock');
+  const lock = $('#lock'); lock.style.transition = 'opacity .3s'; lock.style.opacity = '0';
+  setTimeout(show, 300);
+}
+function tryRestore() {
+  if (session) return;
+  const sv = lsGet(KEY.session); if (!sv || !sv.pin) return;
+  const s = resolvePin(String(sv.pin)); if (s) login(s, true);
+}
+function logout() {
+  playSound('tap'); session = null; entered = '';
+  lsSet(KEY.session, null);
+  closePlayer(); $('#codesModal').classList.add('hidden');
+  ['topbar', 'main', 'footer', 'studentView', 'adminView', 'deskTabs'].forEach(id => $('#' + id).classList.add('hidden'));
+  $('#bottomNav').classList.remove('on');
+  $('#lock').classList.remove('hidden'); drawPin();
+}
+
+/* لصق الكود من الحافظة */
+function applyPasted(raw) {
+  if (lockedFor() > 0) { showLockMsg(); return; }
+  const digits = String(raw || '').replace(/[٠-٩]/g, c => c.charCodeAt(0) - 1632).replace(/\D/g, '').slice(0, PIN_LEN);
+  if (!digits) { playSound('error'); toast('مفيش كود في الحافظة — انسخ الكود الأول', 'error'); return; }
+  entered = digits; drawPin(); $('#pinErr').textContent = ''; playSound('tap');
+  if (digits.length === PIN_LEN) setTimeout(verifyPin, 150);
+  else toast(`الكود ناقص (${digits.length} من ${PIN_LEN} أرقام)`, 'error');
+}
+async function pasteCode() {
+  if (lockedFor() > 0) { showLockMsg(); return; }
+  if (navigator.clipboard && navigator.clipboard.readText) {
+    try { applyPasted(await navigator.clipboard.readText()); return; } catch {}
+  }
+  const f = $('#pasteField'); f.classList.remove('hidden'); f.value = ''; f.focus();
+  toast('اضغط "لصق" من فوق الكيبورد (أو اضغط مطولاً في الخانة)', 'info', 5000);
+}
+$('#pasteField').addEventListener('input', e => {
+  const f = e.target, v = f.value; if (!/[\d٠-٩]/.test(v)) return;
+  f.value = ''; f.classList.add('hidden'); f.blur(); applyPasted(v);
+});
+$('#pasteField').addEventListener('blur', e => { if (!e.target.value) e.target.classList.add('hidden'); });
+window.addEventListener('paste', e => {
+  if ($('#lock').classList.contains('hidden')) return;
+  e.preventDefault(); applyPasted((e.clipboardData || window.clipboardData).getData('text'));
+});
+
+
+window.addEventListener('keydown', e => {
+  if (!$('#codesModal').classList.contains('hidden')) { if (e.key === 'Escape') $('#codesModal').classList.add('hidden'); return; }
+  if (curRoute && curRoute.type !== 'lecture') {
+    if (e.key === 'Escape') { if (vpRoot().classList.contains('vp-fake')) vpFullscreen(); else if (!document.fullscreenElement && !document.webkitFullscreenElement) goBack(); }
+    return;
+  }
+  if ($('#lock').classList.contains('hidden')) return;
+  if (e.key >= '0' && e.key <= '9') pressKey(e.key);
+  else if (e.key === 'Backspace') backKey();
+  else if (e.key === 'Escape') clearKey();
+});
+
+/* =====================================================
+   تجهيز الواجهة حسب نوع الدخول
+===================================================== */
+function setupSession(silent = false) {
+  const dept = curDept(), isStudent = session.role === 'student';
+  $('#studentView').classList.toggle('hidden', !isStudent);
+  $('#adminView').classList.toggle('hidden', isStudent);
+  $('#deskTabs').classList.toggle('hidden', !isStudent);
+  $('#bottomNav').classList.toggle('on', isStudent);
+  const badge = $('#roleBadge');
+  if (isStudent) {
+    badge.textContent = dept.year; badge.className = 'chip hide-sm';
+    showTab('lectures');
+    if (!silent) toast(`أهلاً بك في شعبة ${dept.name} 🎓`);
+  } else {
+    badge.textContent = session.role === 'superadmin' ? 'سوبر أدمن' : 'محاضر'; badge.className = 'chip ok hide-sm';
+    $('#saBox').classList.toggle('hidden', session.role !== 'superadmin');
+    if (session.role === 'superadmin') {
+      $('#saSelect').innerHTML = portal.departments.map(d => `<option value="${esc(d.id)}">${esc(d.year)} — ${esc(d.name)}</option>`).join('');
+      $('#saSelect').value = session.deptId;
+    }
+    $('#fDate').value = todayStr;
+    if (!silent) toast('أهلاً بك في لوحة التحكم 👨‍🏫');
+  }
+  refreshView();
+}
+function refreshView() {
+  if (!session) return;
+  const dept = curDept();
+  $('#subTitle').textContent = session.role === 'student' ? `شعبة ${dept.name}` : `${dept.year} — ${dept.name}`;
+  session.role === 'student' ? renderStudent() : renderAdmin();
+  refreshPages();
+}
+
+/* =====================================================
+   واجهة الطالب
+===================================================== */
+function showTab(name) {
+  playSound('tap');
+  if (curRoute) navTo('', true);
+  ['lectures', 'notifications', 'profile'].forEach(t => $('#tab-' + t).classList.toggle('hidden', t !== name));
+  $$('[data-act="tab"]').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  if (name === 'notifications' && session) {
+    renderNotifs(lsGet(KEY.seen + session.deptId, 0));   // نعرض الجديد بلون مميّز قبل تصفير العدّاد
+    lsSet(KEY.seen + session.deptId, Date.now()); renderUnread();
+  }
+}
+const deptLectures = id => portal.lectures.filter(l => l.deptId === id);
+const deptNotifs = id => portal.notifications.filter(n => n.deptId === id);
+
+function renderUnread() {
+  const seen = lsGet(KEY.seen + session.deptId, 0);
+  const n = deptNotifs(session.deptId).filter(x => (x.createdAt || 0) > seen).length;
+  $$('.js-unread').forEach(b => { b.textContent = n; b.classList.toggle('hidden', !n); });
+}
+function renderStudent() {
+  const dept = curDept(), lecs = deptLectures(dept.id);
+  $('#bYear').textContent = dept.year;
+  $('#bDept').textContent = `شعبة ${dept.name}`;
+  $('#sVid').textContent = lecs.filter(l => l.videoUrl).length;
+  $('#sPdf').textContent = lecs.filter(l => l.pdfUrl).length;
+
+  const subjects = [...new Set([...(dept.subjects || []), ...lecs.map(l => l.subject).filter(Boolean)])];
+  $('#pills').innerHTML =
+    `<button class="pill ${subjectFilter === 'ALL' ? 'active' : ''}" data-act="filter" data-subject="ALL">كل المواد (${lecs.length})</button>` +
+    subjects.map(s => `<button class="pill ${subjectFilter === s ? 'active' : ''}" data-act="filter" data-subject="${esc(s)}">${esc(s)}</button>`).join('');
+
+  renderLectures();
+  renderNotifs();
+  renderUnread();
+
+  $('#pDept').textContent = `شعبة ${dept.name}`;
+  $('#pYear').textContent = dept.year;
+  $('#pBoxDept').textContent = `${dept.name} — ${dept.year}`;
+  $('#pCode').textContent = session.pin;
+  $('#pSubjects').innerHTML = subjects.map(s => `<span class="chip">${esc(s)}</span>`).join('');
+}
+function renderLectures() {
+  const dept = curDept(), q = ($('#q').value || '').trim().toLowerCase();
+  const list = deptLectures(dept.id).filter(l =>
+    (subjectFilter === 'ALL' || l.subject === subjectFilter) &&
+    (!q || [l.title, l.subject, l.instructor].some(x => (x || '').toLowerCase().includes(q))));
+  const grid = $('#lecGrid');
+  if (!list.length) {
+    grid.innerHTML = `<div class="card empty"><div class="ic"><i class="fa-solid fa-folder-open"></i></div>
+      <h3>لا توجد محاضرات في هذا التصنيف حالياً</h3><p>أول ما دكتور المادة يرفع محاضرة هتظهر هنا تلقائياً</p></div>`;
+    return;
+  }
+  const isNew = l => Date.now() - (l.createdAt || 0) < 3 * 864e5;
+  grid.innerHTML = list.map(l => {
+    const drive = (l.videoUrl || '').includes('drive.google.com');
+    const pdf = safeUrl(l.pdfUrl);
+    return `<article class="card lec go" tabindex="0" role="link" data-act="open-lec" data-id="${esc(l.id)}" aria-label="${esc(l.title)}">
+      <div>
+        <div class="lec-top"><span class="chip">${esc(l.subject)}</span><time>${esc(fmtDate(l.date))}</time></div>
+        <h4>${esc(l.title)} ${isNew(l) ? '<span class="chip ok" style="vertical-align:middle">جديد</span>' : ''}</h4>
+        <p class="meta"><i class="fa-solid fa-chalkboard-user"></i>${esc(l.instructor || 'أستاذ المادة')}</p>
+        ${l.notes ? `<p class="note">${esc(l.notes)}</p>` : ''}
+        <div class="tags">
+          ${l.videoUrl ? '<span class="chip"><i class="fa-solid fa-circle-play"></i>فيديو</span>' : ''}
+          ${l.pdfUrl ? '<span class="chip warn"><i class="fa-solid fa-file-pdf"></i>PDF</span>' : ''}
+        </div>
+      </div>
+      <div class="lec-actions"><span class="btn btn-primary btn-block"><i class="fa-solid fa-folder-open"></i>فتح المحاضرة</span></div></article>`;
+  }).join('');
+}
+function renderNotifs(seen = Infinity) {
+  const list = deptNotifs(curDept().id);
+  $('#notifList').innerHTML = list.length ? list.map(n => `
+    <div class="item ${(n.createdAt || 0) > seen ? 'unread' : ''}">
+      <div class="ico"><i class="fa-solid fa-bullhorn"></i></div>
+      <div class="grow"><h4>${esc(n.title)}</h4><p>${esc(n.body)}</p></div><time>${esc(fmtDate(n.date))}</time></div>`).join('')
+    : `<p style="text-align:center;color:var(--muted);font-weight:700;font-size:.8rem;padding:28px 0">لا توجد إشعارات حالياً</p>`;
+}
+
+/* =====================================================
+   المشغّل الذكي
+===================================================== */
+function toEmbed(raw, mode) {
+  const u = safeUrl(raw); if (!u) return '';
+  const url = new URL(u), host = url.hostname.replace(/^www\./, '');
+  let id = '';
+  if (host === 'youtu.be') id = url.pathname.slice(1).split('/')[0];
+  else if (host.endsWith('youtube.com') || host === 'youtube-nocookie.com')
+    id = url.searchParams.get('v') || ((url.pathname.match(/^\/(?:embed|shorts|live)\/([\w-]+)/) || [])[1] || '');
+  if (/^[\w-]{6,20}$/.test(id)) return `https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1`;
+  if (host === 'drive.google.com') {
+    const m = url.pathname.match(/\/d\/([\w-]+)/), fid = m ? m[1] : url.searchParams.get('id');
+    if (fid && /^[\w-]+$/.test(fid)) return `https://drive.google.com/file/d/${fid}/preview`;
+  }
+  return mode === 'pdf' ? `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(u)}` : u;
+}
+/* =====================================================
+   المشغّل المدمج (YouTube / Google Drive / PDF)
+   - يوتيوب: عبر IFrame API مع أزرار تحكم خاصة وإخفاء واجهة يوتيوب بالكامل
+   - درايف: تشغيل مباشر بأزرارنا لو الملف يسمح، وإلا يتحول تلقائياً لمشغّل درايف مع إخفاء زر الفتح الخارجي
+===================================================== */
+const VP = { ad: null, timer: null, hide: null, token: 0, rate: 1, vol: 100, muted: false, drag: false, yt: null };
+const vpRoot = () => $('#vp');
+const RATES = [0.5, 0.75, 1, 1.25, 1.5, 2];
+const fmtT = t => { t = Math.max(0, Math.floor(t || 0)); const h = Math.floor(t / 3600), m = Math.floor(t % 3600 / 60), s = t % 60; return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(s).padStart(2, '0'); };
+
+function parseMedia(u) {
+  const url = new URL(u), host = url.hostname.replace(/^www\./, '');
+  let id = '';
+  if (host === 'youtu.be') id = url.pathname.slice(1).split('/')[0];
+  else if (host.endsWith('youtube.com') || host === 'youtube-nocookie.com')
+    id = url.searchParams.get('v') || ((url.pathname.match(/^\/(?:embed|shorts|live)\/([\w-]+)/) || [])[1] || '');
+  if (/^[\w-]{6,20}$/.test(id)) return { type: 'yt', id };
+  if (host === 'drive.google.com') {
+    const m = url.pathname.match(/\/d\/([\w-]+)/), fid = m ? m[1] : url.searchParams.get('id');
+    if (fid && /^[\w-]+$/.test(fid)) return { type: 'drive', id: fid };
+  }
+  if (/\.(mp4|webm|ogv|mov|m4v)(\?|#|$)/i.test(url.pathname)) return { type: 'file', url: u };
+  return { type: 'other', url: u };
+}
+
+function loadYT() {
+  if (window.YT && window.YT.Player) return Promise.resolve();
+  if (VP.yt) return VP.yt;
+  VP.yt = new Promise((res, rej) => {
+    const prev = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => { try { prev && prev(); } catch {} res(); };
+    const s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api';
+    s.onerror = () => { VP.yt = null; rej(new Error('load')); };
+    document.head.appendChild(s);
+    setTimeout(() => { if (!(window.YT && window.YT.Player)) { VP.yt = null; rej(new Error('timeout')); } }, 15000);
+  });
+  return VP.yt;
+}
+
+function vpSetState(s) {
+  const vp = vpRoot(); vp.dataset.state = s;
+  $('#vpToggleIc').className = 'fa-solid ' + (s === 'playing' ? 'fa-pause' : s === 'ended' ? 'fa-rotate-right' : 'fa-play');
+  $('#vpBigIc').className = 'fa-solid ' + (s === 'ended' ? 'fa-rotate-right' : 'fa-play');
+  vpShowUI();
+}
+function vpShowUI() {
+  const vp = vpRoot(); vp.classList.add('ui'); clearTimeout(VP.hide);
+  if (vp.dataset.state === 'playing') VP.hide = setTimeout(() => { if (!$('#vpMenu').classList.contains('hidden')) return; vp.classList.remove('ui'); }, 2800);
+}
+function vpSetProg(r) {
+  r = Math.min(1, Math.max(0, r || 0));
+  $('#vpProg').style.width = r * 100 + '%'; $('#vpKnob').style.left = r * 100 + '%';
+}
+function vpTick() {
+  const a = VP.ad; if (!a || VP.drag) return;
+  const d = a.dur() || 0, t = a.time() || 0;
+  vpSetProg(d ? t / d : 0);
+  $('#vpBuf').style.width = Math.min(100, (a.buffered() || 0) * 100) + '%';
+  $('#vpTime').textContent = `${fmtT(t)} / ${fmtT(d)}`;
+}
+function vpAttach(ad) {
+  VP.ad = ad; clearInterval(VP.timer); VP.timer = setInterval(vpTick, 250);
+  ad.rate(VP.rate); ad.vol(VP.vol); ad.mute(VP.muted); vpSyncVol(); vpSyncRate();
+}
+function vpDestroy() {
+  clearInterval(VP.timer); clearTimeout(VP.hide);
+  if (VP.ad) { try { VP.ad.destroy(); } catch {} VP.ad = null; }
+  $('#vpStage').innerHTML = '';
+}
+function vpReset() {
+  VP.token++; vpDestroy();
+  const vp = vpRoot();
+  vp.dataset.mode = 'custom'; vp.dataset.kind = ''; vp.dataset.state = 'loading'; vp.classList.remove('ui', 'vp-fake');
+  vpSetProg(0); $('#vpBuf').style.width = '0'; $('#vpTime').textContent = '0:00 / 0:00';
+  $('#vpMenu').classList.add('hidden');
+  try { if (document.fullscreenElement || document.webkitFullscreenElement) (document.exitFullscreen || document.webkitExitFullscreen).call(document); } catch {}
+}
+
+/* ---------- محوّلات التشغيل ---------- */
+async function vpYouTube(id, tok) {
+  vpRoot().dataset.mode = 'custom'; vpSetState('loading');
+  let ready = false, started = false, fell = false, wd = null;
+  /* لو المشغّل المخصّص فشل لأي سبب نحوّل تلقائياً لمشغّل يوتيوب العادي */
+  const fallback = msg => {
+    if (fell || tok !== VP.token) return; fell = true; clearTimeout(wd);
+    toast(msg, 'info', 6000);
+    vpIframe(`https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&playsinline=1&autoplay=1`, 'yt');
+  };
+  wd = setTimeout(() => { if (!ready) fallback('المشغّل اتأخر — تم التحويل للمشغّل البديل'); }, 9000);
+  try { await loadYT(); } catch { fallback('تعذّر تحميل المشغّل — تم التحويل للمشغّل البديل'); return; }
+  if (tok !== VP.token || fell) return;
+  const holder = document.createElement('div'); $('#vpStage').appendChild(holder);
+  const vars = { controls: 0, rel: 0, modestbranding: 1, iv_load_policy: 3, disablekb: 1, fs: 0, playsinline: 1, cc_load_policy: 0, autoplay: 1, enablejsapi: 1 };
+  if (/^https?:$/.test(location.protocol)) vars.origin = location.origin;
+  const p = new YT.Player(holder, {
+    host: 'https://www.youtube-nocookie.com', videoId: id, playerVars: vars,
+    events: {
+      onReady: e => {
+        if (tok !== VP.token || fell) { try { e.target.destroy(); } catch {} return; }
+        ready = true; clearTimeout(wd);
+        vpAttach({
+          play: () => p.playVideo(), pause: () => p.pauseVideo(),
+          seek: t => p.seekTo(t, true), time: () => p.getCurrentTime(), dur: () => p.getDuration(),
+          buffered: () => p.getVideoLoadedFraction(), rate: r => p.setPlaybackRate(r),
+          vol: v => p.setVolume(v), mute: m => m ? p.mute() : p.unMute(),
+          destroy: () => p.destroy()
+        });
+        try { p.playVideo(); } catch {}
+        setTimeout(() => { if (tok === VP.token && !started && vpRoot().dataset.state === 'loading') vpSetState('paused'); }, 3000);
+      },
+      onStateChange: e => {
+        if (tok !== VP.token || !ready || fell) return;
+        const S = YT.PlayerState;
+        if (e.data === S.PLAYING) { started = true; try { p.setPlaybackRate(VP.rate); } catch {} vpSetState('playing'); }
+        else if (e.data === S.PAUSED) { if (started) vpSetState('paused'); }
+        else if (e.data === S.ENDED) vpSetState('ended');
+      },
+      onError: e => {
+        const c = e && e.data;
+        fallback(c === 101 || c === 150 ? 'الفيديو ده مش متاح للتشغيل هنا' : c === 100 ? 'الفيديو غير متاح أو محذوف' : 'حصل خطأ في المشغّل — تم التحويل للمشغّل البديل');
+      }
+    }
+  });
+}
+
+function vpHtml5(src, tok, fallback) {
+  const vp = vpRoot(); vp.dataset.mode = 'custom'; vpSetState('loading');
+  const v = document.createElement('video');
+  v.playsInline = true; v.preload = 'auto'; v.controls = false; v.disablePictureInPicture = true;
+  v.setAttribute('controlsList', 'nodownload noplaybackrate'); v.setAttribute('playsinline', '');
+  v.src = src; $('#vpStage').appendChild(v);
+  let ok = false, failed = false;
+  const fail = () => { if (ok || failed || tok !== VP.token) return; failed = true; clearTimeout(t); vpDestroy(); fallback(); };
+  const t = setTimeout(fail, 12000);
+  v.addEventListener('loadedmetadata', () => { ok = true; clearTimeout(t); });
+  v.addEventListener('error', () => { if (!ok) fail(); else if (tok === VP.token) toast('حصل خطأ أثناء تشغيل الفيديو', 'error'); });
+  v.addEventListener('playing', () => tok === VP.token && vpSetState('playing'));
+  v.addEventListener('pause', () => { if (tok === VP.token && !v.ended && ok) vpSetState('paused'); });
+  v.addEventListener('ended', () => tok === VP.token && vpSetState('ended'));
+  vpAttach({
+    play: () => v.play(), pause: () => v.pause(),
+    seek: x => { v.currentTime = x; }, time: () => v.currentTime, dur: () => (isFinite(v.duration) ? v.duration : 0),
+    buffered: () => { try { return v.duration ? v.buffered.end(v.buffered.length - 1) / v.duration : 0; } catch { return 0; } },
+    rate: r => { v.playbackRate = r; }, vol: x => { v.volume = x / 100; }, mute: m => { v.muted = m; },
+    destroy: () => { v.pause(); v.removeAttribute('src'); v.load(); }
+  });
+  const pr = v.play(); if (pr && pr.catch) pr.catch(() => { if (ok && tok === VP.token) vpSetState('paused'); });
+}
+
+function vpLocal(id, raw) {
+  vpDestroy();
+  const vp = vpRoot(); vp.dataset.mode = 'frame'; vp.dataset.kind = 'local'; vp.classList.remove('ui');
+  const d = document.createElement('div'); d.className = 'vp-local';
+  d.innerHTML = `${id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" referrerpolicy="no-referrer" onerror="this.remove()">` : ''}
+    <div class="vp-local-in"><span>الصفحة مفتوحة كملف على الجهاز، والتشغيل جواها مش متاح</span>
+    <a class="btn btn-primary" href="${esc(raw)}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-play"></i>شاهد الفيديو</a></div>`;
+  $('#vpStage').appendChild(d);
+}
+function vpIframe(src, kind) {
+  vpDestroy();
+  const vp = vpRoot(); vp.dataset.mode = 'frame'; vp.dataset.kind = kind; vp.classList.remove('ui');
+  const f = document.createElement('iframe');
+  f.title = 'المشغّل'; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true;
+  f.referrerPolicy = 'strict-origin-when-cross-origin'; f.src = src;
+  $('#vpStage').appendChild(f);
+}
+
+/* ---------- أوامر التحكم ---------- */
+function vpToggle() {
+  const a = VP.ad; if (!a) return;
+  const s = vpRoot().dataset.state;
+  try {
+    if (s === 'ended') { a.seek(0); a.play(); }
+    else if (s === 'playing') a.pause(); else a.play();
+  } catch {}
+}
+function vpSkip(d) {
+  const a = VP.ad; if (!a) return;
+  const dur = a.dur() || 0, t = Math.min(dur || Infinity, Math.max(0, (a.time() || 0) + d));
+  try { a.seek(t); if (vpRoot().dataset.state === 'ended') a.play(); } catch {}
+  vpTick();
+}
+function vpFlash(txt, side) {
+  const el = $('#vpFlash'); el.textContent = txt; el.style.left = side === 'l' ? '14%' : side === 'r' ? 'auto' : '50%';
+  el.style.right = side === 'r' ? '14%' : 'auto'; el.style.marginLeft = side === 'c' ? '-40px' : '0';
+  el.classList.remove('on'); void el.offsetWidth; el.classList.add('on');
+}
+function vpSyncVol() {
+  $('#vpVol').value = VP.muted ? 0 : VP.vol;
+  $('#vpMuteIc').className = 'fa-solid ' + (VP.muted || VP.vol === 0 ? 'fa-volume-xmark' : VP.vol < 50 ? 'fa-volume-low' : 'fa-volume-high');
+}
+function vpSyncRate() {
+  $('#vpRateBtn').textContent = VP.rate + 'x';
+  $('#vpMenu').innerHTML = RATES.map(r => `<button data-vp="rate" data-r="${r}" class="${r === VP.rate ? 'on' : ''}">${r}x</button>`).join('');
+}
+function vpFullscreen() {
+  const el = vpRoot(), fs = document.fullscreenElement || document.webkitFullscreenElement;
+  if (fs || el.classList.contains('vp-fake')) {
+    if (fs) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    el.classList.remove('vp-fake'); vpFsIcon(); return;
+  }
+  const req = el.requestFullscreen || el.webkitRequestFullscreen;
+  const fake = () => { el.classList.add('vp-fake'); vpFsIcon(); };
+  if (!req) { fake(); return; }
+  try {
+    const r = req.call(el);
+    if (r && r.then) r.then(() => { try { screen.orientation && screen.orientation.lock && screen.orientation.lock('landscape').catch(() => {}); } catch {} }).catch(fake);
+  } catch { fake(); }
+}
+function vpFsIcon() {
+  const on = document.fullscreenElement || document.webkitFullscreenElement || vpRoot().classList.contains('vp-fake');
+  $('#vpFsIc').className = 'fa-solid ' + (on ? 'fa-compress' : 'fa-expand');
+}
+document.addEventListener('fullscreenchange', vpFsIcon);
+document.addEventListener('webkitfullscreenchange', vpFsIcon);
+
+/* ---------- الربط بالواجهة ---------- */
+(function bindPlayer() {
+  const vp = vpRoot(), shield = $('#vpShield'), seek = $('#vpSeek');
+  vp.addEventListener('contextmenu', e => e.preventDefault());
+  vp.addEventListener('mousemove', vpShowUI);
+  vp.addEventListener('touchstart', vpShowUI, { passive: true });
+
+  let lastTap = 0, tapTimer = null;
+  shield.addEventListener('click', e => {
+    if (!VP.ad) return;
+    const menu = $('#vpMenu');
+    if (!menu.classList.contains('hidden')) { menu.classList.add('hidden'); return; }
+    const r = shield.getBoundingClientRect(), x = (e.clientX - r.left) / r.width;
+    const side = x < .33 ? 'l' : x > .67 ? 'r' : 'c', now = Date.now();
+    const st = vp.dataset.state;
+    if (now - lastTap < 300) {
+      clearTimeout(tapTimer); lastTap = 0;
+      if (side === 'c') vpFullscreen(); else { vpSkip(side === 'l' ? -10 : 10); vpFlash(side === 'l' ? '‹‹ 10' : '10 ››', side); }
+    } else {
+      lastTap = now;
+      if (st === 'playing') tapTimer = setTimeout(vpToggle, 260);   // ننتظر لو هيبقى ضغطتين
+      else vpToggle();                                              // تشغيل فوري (مهم للموبايل)
+    }
+    vpShowUI();
+  });
+
+  vp.addEventListener('click', e => {
+    const b = e.target.closest('[data-vp]'); if (!b) return;
+    e.stopPropagation(); playSound('tap');
+    switch (b.dataset.vp) {
+      case 'toggle': vpToggle(); break;
+      case 'back': vpSkip(-10); vpFlash('‹‹ 10', 'l'); break;
+      case 'fwd': vpSkip(10); vpFlash('10 ››', 'r'); break;
+      case 'mute': VP.muted = !VP.muted; if (!VP.muted && VP.vol === 0) VP.vol = 60; if (VP.ad) { VP.ad.mute(VP.muted); VP.ad.vol(VP.vol); } vpSyncVol(); break;
+      case 'speed': $('#vpMenu').classList.toggle('hidden'); break;
+      case 'rate': VP.rate = +b.dataset.r; if (VP.ad) VP.ad.rate(VP.rate); vpSyncRate(); break;
+      case 'fs': vpFullscreen(); break;
+    }
+    vpShowUI();
+  });
+
+  $('#vpVol').addEventListener('input', e => {
+    VP.vol = +e.target.value; VP.muted = VP.vol === 0;
+    if (VP.ad) { VP.ad.vol(VP.vol); VP.ad.mute(VP.muted); } vpSyncVol();
+  });
+
+  const ratio = e => { const r = seek.getBoundingClientRect(); return Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)); };
+  const preview = r => { vpSetProg(r); const d = VP.ad ? VP.ad.dur() : 0; $('#vpTime').textContent = `${fmtT(r * d)} / ${fmtT(d)}`; };
+  seek.addEventListener('pointerdown', e => {
+    if (!VP.ad) return; VP.drag = true;
+    try { seek.setPointerCapture(e.pointerId); } catch {}
+    preview(ratio(e)); vpShowUI();
+  });
+  seek.addEventListener('pointermove', e => { if (VP.drag) preview(ratio(e)); });
+  const endDrag = e => {
+    if (!VP.drag) return; VP.drag = false;
+    const a = VP.ad, d = a ? a.dur() : 0;
+    if (a && d) { try { a.seek(ratio(e) * d); if (vpRoot().dataset.state === 'ended') a.play(); } catch {} }
+    vpTick();
+  };
+  seek.addEventListener('pointerup', endDrag);
+  seek.addEventListener('pointercancel', endDrag);
+
+  document.addEventListener('keydown', e => {
+    if (!(curRoute && curRoute.type === 'watch') || vp.dataset.mode !== 'custom' || !VP.ad) return;
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test((e.target.tagName || ''))) return;
+    const k = e.key;
+    if (k === ' ' || k === 'k' || k === 'K') { e.preventDefault(); vpToggle(); }
+    else if (k === 'ArrowRight') { e.preventDefault(); vpSkip(5); vpFlash('5 ››', 'r'); }
+    else if (k === 'ArrowLeft') { e.preventDefault(); vpSkip(-5); vpFlash('‹‹ 5', 'l'); }
+    else if (k === 'ArrowUp') { e.preventDefault(); VP.vol = Math.min(100, VP.vol + 10); VP.muted = false; VP.ad.vol(VP.vol); VP.ad.mute(false); vpSyncVol(); }
+    else if (k === 'ArrowDown') { e.preventDefault(); VP.vol = Math.max(0, VP.vol - 10); VP.ad.vol(VP.vol); vpSyncVol(); }
+    else if (k === 'm' || k === 'M') { VP.muted = !VP.muted; VP.ad.mute(VP.muted); vpSyncVol(); }
+    else if (k === 'f' || k === 'F') vpFullscreen();
+    else return;
+    vpShowUI();
+  });
+})();
+
+/* =====================================================
+   الصفحات: المحاضرة ← المشغّل الكامل / PDF
+   التنقل بالـ hash (#lecture/ID — #watch/ID — #pdf/ID) فزر الرجوع وريفرش الصفحة شغّالين
+===================================================== */
+const BASE_TITLE = document.title;
+let curRoute = null, routeKey = '', pageMounted = false, listScrollY = 0;
+const PAGE_OF = { lecture: 'pageLecture', watch: 'pageWatch', pdf: 'pagePdf' };
+
+const ytIdOf = u => { const s = safeUrl(u); if (!s) return ''; try { const m = parseMedia(s); return m.type === 'yt' ? m.id : ''; } catch { return ''; } };
+const thumbHTML = l => { const id = ytIdOf(l.videoUrl); return id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ''; };
+const findLecture = id => { const l = portal.lectures.find(x => x.id === id); return (l && session && (l.deptId === session.deptId || session.role === 'superadmin')) ? l : null; };
+const parseHash = () => {
+  const p = location.hash.replace(/^#\/?/, '').split('/');
+  return PAGE_OF[p[0]] && p[1] ? { type: p[0], id: decodeURIComponent(p[1]) } : null;
+};
+function navTo(h, replace) {
+  const url = h ? '#' + h : location.pathname + location.search;
+  let ok = true;
+  try { replace ? history.replaceState(history.state, '', url) : history.pushState({ app: 1 }, '', url); } catch { ok = false; }
+  if (ok) route(); else location.hash = h;
+}
+function goBack() { if (history.state && history.state.app) history.back(); else navTo('', true); }
+
+function showBase(on) {
+  if (!session) return;
+  const st = session.role === 'student';
+  $('#studentView').classList.toggle('hidden', !on || !st);
+  $('#adminView').classList.toggle('hidden', !on || st);
+}
+function hidePages() { Object.values(PAGE_OF).forEach(id => $('#' + id).classList.add('hidden')); }
+function leavePages() {
+  vpReset(); $('#pdfStage').innerHTML = ''; hidePages();
+  curRoute = null; routeKey = ''; pageMounted = false;
+  document.body.classList.remove('in-full'); document.title = BASE_TITLE;
+  try { if (location.hash) history.replaceState(null, '', location.pathname + location.search); } catch {}
+}
+function closePlayer() { leavePages(); }
+
+function route(force) {
+  if (!session) return;
+  const r = parseHash(), key = r ? r.type + '/' + r.id : '';
+  if (!force && key === routeKey) return;
+  const wasPage = !!curRoute;
+  if (r && !wasPage) listScrollY = window.scrollY;
+  vpReset(); $('#pdfStage').innerHTML = ''; hidePages();
+  routeKey = key; curRoute = r; pageMounted = false; document.title = BASE_TITLE;
+
+  if (!r) {
+    document.body.classList.remove('in-full'); showBase(true);
+    window.scrollTo(0, wasPage ? listScrollY : 0); return;
+  }
+  showBase(false);
+  const l = findLecture(r.id);
+  if (!l) {   // لسه البيانات بتحمّل أو المحاضرة اتحذفت
+    document.body.classList.remove('in-full'); $('#pageLecture').classList.remove('hidden');
+    $('#lpBody').innerHTML = cloudReady
+      ? `<div class="card empty"><div class="ic"><i class="fa-solid fa-circle-exclamation"></i></div><h3>المحاضرة دي مش موجودة</h3><p>ممكن تكون اتحذفت أو الرابط غير صحيح</p><button class="btn btn-primary" style="margin-top:16px" data-act="go-back">رجوع</button></div>`
+      : `<div class="card empty"><div class="ic"><i class="fa-solid fa-spinner fa-spin"></i></div><h3>جاري تحميل المحاضرة…</h3></div>`;
+    window.scrollTo(0, 0); return;
+  }
+  pageMounted = true; document.title = `${l.title} — ${BASE_TITLE}`;
+  document.body.classList.toggle('in-full', r.type !== 'lecture');
+  $('#' + PAGE_OF[r.type]).classList.remove('hidden');
+  if (r.type === 'lecture') renderLecturePage(l);
+  else if (r.type === 'watch') mountWatch(l);
+  else mountPdf(l);
+  window.scrollTo(0, 0);
+}
+/* بيتنادى بعد كل تحديث للبيانات (Firebase) من غير ما يعيد تشغيل الفيديو */
+function refreshPages() {
+  if (!session) return;
+  const r = parseHash(), key = r ? r.type + '/' + r.id : '';
+  if (key !== routeKey) { route(); return; }
+  if (!curRoute) return;
+  const l = findLecture(curRoute.id);
+  if (!pageMounted) { if (l) route(true); return; }
+  if (!l) return;
+  if (curRoute.type === 'lecture') renderLecturePage(l);
+  else if (curRoute.type === 'watch') renderPlaylist(l);
+}
+
+const relItem = (x, act, cur) => `<button class="rel-item${cur ? ' cur' : ''}" data-act="${act}" data-id="${esc(x.id)}">
+  <span class="rel-th">${thumbHTML(x)}<i class="fa-solid ${x.videoUrl ? 'fa-play' : 'fa-file-pdf'}"></i></span>
+  <span class="rel-t"><b>${esc(x.title)}</b><small>${esc(x.instructor || 'أستاذ المادة')} • ${esc(fmtDate(x.date))}</small></span></button>`;
+
+/* ---------- صفحة المحاضرة ---------- */
+function renderLecturePage(l) {
+  const vid = safeUrl(l.videoUrl), pdf = safeUrl(l.pdfUrl), drive = (l.videoUrl || '').includes('drive.google.com');
+  const isNew = Date.now() - (l.createdAt || 0) < 3 * 864e5;
+  const others = deptLectures(l.deptId).filter(x => x.id !== l.id && x.subject === l.subject);
+  const id = esc(l.id);
+  $('#lpBody').innerHTML = `
+    <div class="card lp-hero">
+      <div class="tags"><span class="chip">${esc(l.subject)}</span>${isNew ? '<span class="chip ok">جديد</span>' : ''}
+        ${vid ? '<span class="chip"><i class="fa-solid fa-circle-play"></i>فيديو</span>' : ''}
+        ${pdf ? '<span class="chip warn"><i class="fa-solid fa-file-pdf"></i>PDF</span>' : ''}</div>
+      <h1>${esc(l.title)}</h1>
+      <div class="lp-meta">
+        <span><i class="fa-solid fa-chalkboard-user"></i>${esc(l.instructor || 'أستاذ المادة')}</span>
+        <span><i class="fa-regular fa-calendar"></i>${esc(fmtDate(l.date))}</span>
+      </div>
+      ${l.notes ? `<p class="note" style="margin:16px 0 0">${esc(l.notes)}</p>` : ''}
+    </div>
+    <div class="lp-media">
+      ${vid ? `<div class="card mc">
+        <button class="mc-thumb" data-act="play" data-id="${id}" data-mode="video" aria-label="تشغيل الفيديو">${thumbHTML(l)}<span class="pl"><i class="fa-solid fa-play"></i></span></button>
+        <div class="mc-body"><h3>فيديو المحاضرة</h3><p>بيفتح في صفحة مشغّل كاملة</p>
+          <button class="btn btn-primary btn-block" data-act="play" data-id="${id}" data-mode="video"><i class="fa-solid fa-circle-play"></i>مشاهدة المحاضرة</button></div></div>` : ''}
+      ${pdf ? `<div class="card mc">
+        <button class="mc-thumb pdf" data-act="play" data-id="${id}" data-mode="pdf" aria-label="قراءة الملف"><i class="fa-solid fa-file-pdf big-ic"></i></button>
+        <div class="mc-body"><h3>ملف الـ PDF</h3><p>اقرأ الملف مباشرة من غير ما تنزّله</p>
+          <div class="row"><button class="btn btn-soft" data-act="play" data-id="${id}" data-mode="pdf"><i class="fa-solid fa-book-open"></i>قراءة الملف</button>
+          <a class="btn btn-ghost" style="flex:none" href="${esc(pdf)}" target="_blank" rel="noopener noreferrer" aria-label="فتح خارجياً"><i class="fa-solid fa-up-right-from-square"></i></a></div></div></div>` : ''}
+    </div>
+    ${others.length ? `<h3 class="sec-title"><i class="fa-solid fa-layer-group"></i>محاضرات تانية في ${esc(l.subject)}</h3>
+      <div class="rel">${others.slice(0, 12).map(x => relItem(x, 'open-lec')).join('')}</div>` : ''}`;
+}
+
+/* ---------- صفحة المشغّل الكاملة ---------- */
+function renderPlaylist(l) {
+  const list = deptLectures(l.deptId).filter(x => x.subject === l.subject && x.videoUrl);
+  $('#wpListTitle').textContent = `محاضرات ${l.subject} (${list.length})`;
+  $('#wpList').innerHTML = list.map(x => relItem(x, 'watch-other', x.id === l.id)).join('');
+  const solo = list.length < 2;
+  $('#wpSide').classList.toggle('hidden', solo); $('#wpGrid').classList.toggle('solo', solo);
+}
+function mountWatch(l) {
+  const raw = safeUrl(l.videoUrl);
+  if (!raw) { toast('رابط الفيديو غير صالح', 'error'); navTo('lecture/' + l.id, true); return; }
+  playSound('tap');
+  const drive = raw.includes('drive.google.com'), id = esc(l.id), pdf = safeUrl(l.pdfUrl);
+  $('#wpSubject').textContent = l.subject; $('#wpTitle').textContent = l.title;
+  $('#wpInfo').innerHTML = `
+    <div class="tags"><span class="chip">${esc(l.subject)}</span><span class="chip"><i class="fa-solid fa-circle-play"></i>فيديو</span></div>
+    <h2>${esc(l.title)}</h2>
+    <div class="lp-meta"><span><i class="fa-solid fa-chalkboard-user"></i>${esc(l.instructor || 'أستاذ المادة')}</span><span><i class="fa-regular fa-calendar"></i>${esc(fmtDate(l.date))}</span></div>
+    ${l.notes ? `<p class="note" style="margin:14px 0 0">${esc(l.notes)}</p>` : ''}
+    <div class="wp-actions">
+      ${pdf ? `<button class="btn btn-soft" data-act="play" data-id="${id}" data-mode="pdf"><i class="fa-solid fa-file-pdf"></i>ملف الـ PDF</button>` : ''}
+      <button class="btn btn-ghost" data-act="open-lec" data-id="${id}"><i class="fa-solid fa-circle-info"></i>تفاصيل المحاضرة</button>
+    </div>`;
+  renderPlaylist(l);
+  let note = 'اضغط مرتين على يمين/يسار الفيديو للتقديم أو الرجوع 10 ثواني — ولو الفيديو مش بيشتغل اتأكد من الإنترنت أو صلاحية الرابط.';
+  const hosted = /^https?:$/.test(location.protocol);
+  if (!hosted) note = '⚠️ الصفحة مفتوحة كملف مش كلينك — الفيديو هيشتغل جوّا الموقع بعد ما ترفعه على استضافة (Vercel / Netlify / GitHub Pages). لحد وقتها اضغط "شاهد الفيديو".';
+  $('#plNote').textContent = note;
+  vpSyncVol(); vpSyncRate();
+
+  const tok = VP.token, m = parseMedia(raw);
+  if (m.type === 'yt' && !hosted) vpLocal(m.id, raw);   // يوتيوب بيرفض التضمين من ملف محلي (content:// أو file://)
+  else if (m.type === 'yt') vpYouTube(m.id, tok);
+  else if (m.type === 'file') vpHtml5(m.url, tok, () => vpIframe(m.url, 'other'));
+  else vpIframe(toEmbed(raw, 'video'), m.type === 'drive' ? 'drive' : 'other');   // Drive: مشغّل درايف الرسمي (أضمن من التحميل المباشر)
+}
+
+/* ---------- صفحة الـ PDF ---------- */
+function mountPdf(l) {
+  const raw = safeUrl(l.pdfUrl);
+  if (!raw) { toast('رابط الملف غير صالح', 'error'); navTo('lecture/' + l.id, true); return; }
+  playSound('tap');
+  $('#pdSubject').textContent = l.subject; $('#pdTitle').textContent = l.title; $('#pdExt').href = raw;
+  const f = document.createElement('iframe');
+  f.title = l.title; f.referrerPolicy = 'strict-origin-when-cross-origin'; f.src = toEmbed(raw, 'pdf');
+  $('#pdfStage').appendChild(f);
+  $('#pdNote').textContent = 'لو الملف مش بيظهر، اضغط "فتح خارجياً" أو اتأكد إن صلاحية الرابط "أي شخص لديه الرابط".';
+}
+window.addEventListener('popstate', () => route());
+window.addEventListener('hashchange', () => route());
+
+/* =====================================================
+   لوحة المحاضر / الأدمن
+===================================================== */
+const vault = () => lsGet(KEY.vault, {});
+const vaultSet = (k, v) => { const x = vault(); x[k] = v; lsSet(KEY.vault, x); };
+
+function renderAdmin() {
+  const dept = curDept(), isSuper = session.role === 'superadmin', forced = session.forcedSubject;
+  $('#aRole').textContent = isSuper ? 'صلاحية كاملة لكل الشعب' : (forced ? `مخصّص لمادة: ${forced}` : 'محاضر الشعبة');
+  $('#aTitle').textContent = `${dept.year} — شعبة ${dept.name}`;
+  $('#aDeptInfo').textContent = `${dept.year} — ${dept.name}`;
+  const code = isSuper ? (vault()[dept.id + ':student'] || '') : '';
+  $('#aCodeRow').classList.toggle('hidden', !code); $('#aStudentCode').textContent = code;
+
+  $('#subjList').innerHTML = (dept.subjects || []).map(s => `<option value="${esc(s)}">`).join('');
+  const subj = $('#fSubject');
+  if (forced) { subj.value = forced; subj.readOnly = true; } else subj.readOnly = false;
+  if (forced && session.doctorName && !$('#fInstr').value) $('#fInstr').value = session.doctorName;
+
+  const lecs = deptLectures(dept.id).filter(l => !forced || l.subject === forced);
+  $('#aCount').textContent = `${lecs.length} محاضرة`;
+  $('#aLecs').innerHTML = lecs.length ? lecs.map(l => `
+    <div class="lec-row"><div style="min-width:0">
+      <span class="chip">${esc(l.subject)}</span><h4>${esc(l.title)}</h4>
+      <p>${esc(l.instructor)} • ${esc(fmtDate(l.date))}${l.videoUrl ? ' • فيديو' : ''}${l.pdfUrl ? ' • PDF' : ''}</p></div>
+      <div class="ops">
+        ${l.videoUrl ? `<button class="btn btn-soft btn-sm" data-act="play" data-id="${esc(l.id)}" data-mode="video">معاينة الفيديو</button>` : ''}
+        ${l.pdfUrl ? `<button class="btn btn-soft btn-sm" data-act="play" data-id="${esc(l.id)}" data-mode="pdf">معاينة PDF</button>` : ''}
+        <button class="btn btn-danger btn-sm" data-act="del-lec" data-id="${esc(l.id)}"><i class="fa-solid fa-trash-can"></i>حذف</button>
+      </div></div>`).join('')
+    : `<p style="text-align:center;color:var(--muted);font-weight:700;font-size:.8rem;padding:24px 0">لم يتم رفع محاضرات بعد — ابدأ من النموذج بالأعلى.</p>`;
+
+  const ns = deptNotifs(dept.id);
+  $('#aNotifs').innerHTML = ns.length ? ns.map(n => `
+    <div class="item"><div class="ico"><i class="fa-solid fa-bullhorn"></i></div>
+      <div class="grow"><h4>${esc(n.title)}</h4><p>${esc(n.body)}</p></div>
+      <button class="btn btn-danger btn-sm" data-act="del-notif" data-id="${esc(n.id)}" aria-label="حذف"><i class="fa-solid fa-trash-can"></i></button></div>`).join('')
+    : `<p style="text-align:center;color:var(--muted);font-weight:700;font-size:.8rem;padding:24px 0">لا توجد إشعارات مُرسلة</p>`;
+}
+const isAdmin = () => session && (session.role === 'instructor' || session.role === 'superadmin');
+
+$('#lecForm').addEventListener('submit', e => {
+  e.preventDefault(); if (!isAdmin()) return;
+  const dept = curDept();
+  const title = $('#fTitle').value.trim(), subject = (session.forcedSubject || $('#fSubject').value).trim(), instructor = $('#fInstr').value.trim();
+  const rawV = $('#fVideo').value.trim(), rawP = $('#fPdf').value.trim();
+  const videoUrl = rawV ? safeUrl(rawV) : '', pdfUrl = rawP ? safeUrl(rawP) : '';
+  if ((rawV && !videoUrl) || (rawP && !pdfUrl)) { playSound('error'); toast('أحد الروابط غير صالح (لازم يبدأ بـ https://)', 'error'); return; }
+  if (!videoUrl && !pdfUrl) { playSound('error'); toast('ضع رابط فيديو أو PDF على الأقل', 'error'); return; }
+
+  if (!dept.subjects.includes(subject)) { dept.subjects.push(subject); cloudPut(`departments/${dept.id}/subjects`, dept.subjects); }
+  const now = Date.now();
+  const lec = { id: uid('l_'), deptId: dept.id, title, subject, instructor, date: $('#fDate').value || todayStr, videoUrl, pdfUrl, notes: $('#fNotes').value.trim(), createdAt: now };
+  const note = { id: uid('n_'), deptId: dept.id, title: `محاضرة جديدة في ${subject}`, body: `تم رفع «${title}» بواسطة ${instructor}. تقدر تشوفها دلوقتي.`, date: todayStr, createdAt: now };
+  portal.lectures.unshift(lec); portal.notifications.unshift(note);
+  persist(); cloudPut('lectures/' + lec.id, lec); cloudPut('notifications/' + note.id, note);
+
+  ['fTitle', 'fVideo', 'fPdf', 'fNotes'].forEach(id => $('#' + id).value = '');
+  playSound('success'); toast('تم نشر المحاضرة وإشعار الطلاب ✨'); renderAdmin();
+});
+$('#notifForm').addEventListener('submit', e => {
+  e.preventDefault(); if (!isAdmin()) return;
+  const n = { id: uid('n_'), deptId: curDept().id, title: $('#nTitle').value.trim(), body: $('#nBody').value.trim(), date: todayStr, createdAt: Date.now() };
+  portal.notifications.unshift(n); persist(); cloudPut('notifications/' + n.id, n);
+  $('#nTitle').value = ''; $('#nBody').value = '';
+  playSound('success'); toast('تم إرسال الإشعار 🔔'); renderAdmin();
+});
+$('#saSelect').addEventListener('change', e => { session.deptId = e.target.value; playSound('tap'); $('#fSubject').value = ''; renderAdmin(); $('#subTitle').textContent = `${curDept().year} — ${curDept().name}`; });
+$('#q').addEventListener('input', () => session && session.role === 'student' && renderLectures());
+$('#lecGrid').addEventListener('keydown', e => {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  const c = e.target.closest('[data-act="open-lec"]'); if (c) { e.preventDefault(); c.click(); }
+});
+
+/* =====================================================
+   إدارة الأكواد (السوبر أدمن)
+===================================================== */
+const allHashes = () => new Set([SUPER_HASH, ...portal.departments.flatMap(d => [d.studentHash, d.instructorHash]), ...portal.customInstructors.map(c => c.pinHash)]);
+function genPin(role, order) {
+  const used = allHashes();
+  for (;;) {
+    const r = crypto.getRandomValues(new Uint32Array(1))[0] % 1000000;
+    const pin = `${role}${String(order).padStart(2, '0')}${String(r).padStart(6, '0')}`;
+    if (!used.has(H(pin))) return pin;
+  }
+}
+function openCodes() {
+  if (!session || session.role !== 'superadmin') return;
+  playSound('tap');
+  $('#dDept').innerHTML = portal.departments.map(d => `<option value="${esc(d.id)}">${esc(d.year)} — ${esc(d.name)}</option>`).join('');
+  renderCodes(); $('#codesModal').classList.remove('hidden');
+}
+function renderCodes() {
+  const v = vault();
+  const cell = (key, deptName) => {
+    const val = v[key];
+    return `<div class="code-cell">${val ? `<span class="code-val">${esc(val)}</span>` : '<span class="code-val locked">•••••••••</span>'}
+      <button class="btn btn-soft btn-sm" data-act="regen" data-key="${esc(key)}" title="توليد كود جديد"><i class="fa-solid fa-rotate"></i></button>
+      ${val ? `<button class="btn btn-ghost btn-sm" data-act="copy" data-val="${esc(val)}" title="نسخ"><i class="fa-regular fa-copy"></i></button>
+      ${key.endsWith(':student') ? `<button class="btn btn-ok btn-sm" data-act="wa-code" data-val="${esc(val)}" data-dept="${esc(deptName)}" title="إرسال واتساب"><i class="fa-brands fa-whatsapp"></i></button>` : ''}` : ''}</div>`;
+  };
+  $('#codeRows').innerHTML = portal.departments.map(d => `<tr>
+    <td>${esc(d.year)}</td><td><b>${esc(d.name)}</b></td>
+    <td>${cell(d.id + ':student', d.name)}</td><td>${cell(d.id + ':instructor', d.name)}</td></tr>`).join('');
+  const cl = portal.customInstructors;
+  $('#docList').innerHTML = cl.length ? cl.map(c => {
+    const d = byId(c.deptId), val = v['custom:' + c.id];
+    return `<div class="item"><div class="grow"><h4>${esc(c.name)}</h4><p>${esc(d ? d.year + ' — ' + d.name : '')} • مادة: ${esc(c.subject)}</p></div>
+      ${val ? `<span class="code-val">${esc(val)}</span><button class="btn btn-ghost btn-sm" data-act="copy" data-val="${esc(val)}"><i class="fa-regular fa-copy"></i></button>` : '<span class="code-val locked">•••••••••</span>'}
+      <button class="btn btn-danger btn-sm" data-act="del-custom" data-id="${esc(c.id)}"><i class="fa-solid fa-trash-can"></i></button></div>`;
+  }).join('') : `<p style="color:var(--muted);font-weight:700;font-size:.78rem">لا توجد أكواد فردية بعد.</p>`;
+}
+function regen(key) {
+  const [deptId, field] = key.split(':'), d = byId(deptId); if (!d) return;
+  if (!confirm(`توليد كود جديد؟ الكود القديم لشعبة ${d.name} هيتوقف فوراً.`)) return;
+  const pin = genPin(field === 'student' ? 1 : 2, d.order);
+  d[field + 'Hash'] = H(pin); vaultSet(key, pin); persist();
+  cloudPut(`departments/${d.id}/${field}Hash`, d[field + 'Hash']);
+  playSound('success'); toast(`الكود الجديد: ${pin}`); renderCodes();
+}
+$('#docForm').addEventListener('submit', e => {
+  e.preventDefault(); if (!session || session.role !== 'superadmin') return;
+  const deptId = $('#dDept').value, d = byId(deptId); let pin = $('#dPin').value.trim();
+  if (pin && !/^\d{9}$/.test(pin)) { playSound('error'); toast('الكود لازم 9 أرقام بالضبط', 'error'); return; }
+  if (!pin) pin = genPin(3, d.order);
+  if (allHashes().has(H(pin))) { playSound('error'); toast('الكود ده مستخدم بالفعل', 'error'); return; }
+  const c = { id: uid('c_'), name: $('#dName').value.trim(), deptId, subject: $('#dSubj').value.trim(), pinHash: H(pin) };
+  portal.customInstructors.push(c); vaultSet('custom:' + c.id, pin); persist(); cloudPut('customInstructors/' + c.id, c);
+  ['dName', 'dSubj', 'dPin'].forEach(id => $('#' + id).value = '');
+  playSound('success'); toast(`تم الحفظ — الكود: ${pin}`); renderCodes();
+});
+async function copyText(t) {
+  try { await navigator.clipboard.writeText(t); }
+  catch { const a = Object.assign(document.createElement('textarea'), { value: t }); document.body.appendChild(a); a.select(); try { document.execCommand('copy'); } catch {} a.remove(); }
+  playSound('tap'); toast('تم النسخ 📋', 'info');
+}
+
+/* =====================================================
+   تثبيت التطبيق (PWA)
+===================================================== */
+let installEvt = null;
+const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEvt = e; });
+window.addEventListener('appinstalled', () => { installEvt = null; $$('.js-install').forEach(b => b.classList.add('hidden')); });
+if (standalone) $$('.js-install').forEach(b => b.classList.add('hidden'));
+try {
+  const man = { name:'منصة المعهد الفني الصناعي بالصحافة', short_name:'منصة الصحافة', lang:'ar', dir:'rtl', start_url:location.href.split('#')[0], display:'standalone', background_color:'#ffffff', theme_color:'#ffffff',
+    icons:[{ src:document.querySelector('link[rel=icon]').href, sizes:'any', type:'image/svg+xml', purpose:'any' }] };
+  const l = document.createElement('link'); l.rel = 'manifest';
+  l.href = URL.createObjectURL(new Blob([JSON.stringify(man)], { type:'application/manifest+json' })); document.head.appendChild(l);
+} catch {}
+
+/* =====================================================
+   موزّع الأحداث المركزي
+===================================================== */
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-act]'); if (!el) return;
+  const a = el.dataset.act, d = el.dataset;
+  switch (a) {
+    case 'key': pressKey(d.key); break;
+    case 'back': backKey(); break;
+    case 'paste': pasteCode(); break;
+    case 'theme': { const t = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; lsSet(KEY.theme, t); applyTheme(t); playSound('tap'); break; }
+    case 'clear': clearKey(); break;
+    case 'eye': showPin = !showPin; $('.js-eye-ic').className = 'js-eye-ic fa-regular ' + (showPin ? 'fa-eye-slash' : 'fa-eye'); drawPin(); break;
+    case 'sound': soundOn = !soundOn; lsSet(KEY.sound, soundOn); applySoundIcon(); playSound('tap'); toast(soundOn ? 'تم تفعيل الصوت 🔊' : 'تم كتم الصوت 🔇', 'info'); break;
+    case 'logout': logout(); break;
+    case 'tab': showTab(d.tab); break;
+    case 'filter': playSound('tap'); subjectFilter = d.subject; renderStudent(); break;
+    case 'play': navTo((d.mode === 'pdf' ? 'pdf/' : 'watch/') + d.id); break;
+    case 'open-lec': navTo('lecture/' + d.id, !!curRoute && curRoute.type === 'lecture'); break;
+    case 'watch-other': navTo('watch/' + d.id, true); break;
+    case 'go-back': playSound('tap'); goBack(); break;
+    case 'open-codes': openCodes(); break;
+    case 'close-codes': $('#codesModal').classList.add('hidden'); break;
+    case 'backdrop-codes': if (e.target === el) $('#codesModal').classList.add('hidden'); break;
+    case 'del-lec':
+      if (!isAdmin() || !confirm('حذف المحاضرة نهائياً؟')) break;
+      portal.lectures = portal.lectures.filter(l => l.id !== d.id); persist(); cloudDel('lectures/' + d.id); playSound('tap'); toast('تم حذف المحاضرة', 'info'); renderAdmin(); break;
+    case 'del-notif':
+      if (!isAdmin() || !confirm('حذف الإشعار؟')) break;
+      portal.notifications = portal.notifications.filter(n => n.id !== d.id); persist(); cloudDel('notifications/' + d.id); playSound('tap'); renderAdmin(); break;
+    case 'regen': regen(d.key); break;
+    case 'copy': copyText(d.val); break;
+    case 'copy-session': copyText(session.pin); break;
+    case 'wa-code': window.open(`https://wa.me/?text=${encodeURIComponent(`كود دخول منصة المعهد الفني الصناعي بالصحافة — شعبة ${d.dept}:\n${d.val}\n${location.href.split('#')[0]}`)}`, '_blank', 'noopener'); break;
+    case 'del-custom':
+      if (!session || session.role !== 'superadmin' || !confirm('حذف هذا الكود؟')) break;
+      portal.customInstructors = portal.customInstructors.filter(c => c.id !== d.id); persist(); cloudDel('customInstructors/' + d.id); renderCodes(); break;
+    case 'install':
+      playSound('tap');
+      if (installEvt) { installEvt.prompt(); installEvt = null; }
+      else toast('من قائمة المتصفح ⋮ اختار "تثبيت التطبيق" أو "إضافة إلى الشاشة الرئيسية" (آيفون: زرار المشاركة ← إضافة إلى الشاشة الرئيسية)', 'info', 8000);
+      break;
+  }
+});
+
+/* =====================================================
+   البدء
+===================================================== */
+renderSignature();
+buildPinUI();
+if (lockedFor() > 0) showLockMsg();
+tryRestore();
+</script>
+
+<!-- ================= Firebase Realtime Database ================= -->
+<script>
+(async () => {
+  const ROOT = 'alsahafa_v4';
+  const LEGACY_ROOT = 'alsahafa_portal_v2';   // قاعدة بيانات المنصة القديمة (قراءة فقط لنقل المحاضرات)
+  const config = {
+    apiKey: "AIzaSyC5gBC_LZifnh_rGEob1C72dwHwftTAEvo",
+    authDomain: "alsahafa-7b241.firebaseapp.com",
+    databaseURL: "https://alsahafa-7b241-default-rtdb.firebaseio.com",
+    projectId: "alsahafa-7b241",
+    storageBucket: "alsahafa-7b241.firebasestorage.app",
+    messagingSenderId: "266524855505",
+    appId: "1:266524855505:web:cff986ce7c143391d489f0",
+    measurementId: "G-PEB7MXZZSP"
+  };
+  try {
+    const base = 'https://www.gstatic.com/firebasejs/10.7.1/';
+    const [{ initializeApp }, { getDatabase, ref, set, remove, onValue, get }] = await Promise.all([
+      import(base + 'firebase-app.js'), import(base + 'firebase-database.js')
+    ]);
+    const db = getDatabase(initializeApp(config));
+    const at = p => ref(db, p ? ROOT + '/' + p : ROOT);
+    window.cloud = { put: (p, v) => set(at(p), v), del: p => remove(at(p)), legacy: async () => (await get(ref(db, LEGACY_ROOT))).val() };
+    onValue(ref(db, '.info/connected'), s => window.setCloudState(s.val() ? 'online' : 'offline'));
+    onValue(at(''), s => window.applyCloud(s.val()), () => window.setCloudState('offline'));
+  } catch (err) {
+    console.warn('Firebase unavailable:', err);
+    window.setCloudState('offline');
+  }
+})();
+</script>
+</body>
+</html>
